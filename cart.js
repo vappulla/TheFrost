@@ -58,6 +58,7 @@ function removeFromCart(index) {
 }
 
 // Send cart details to the customer's email and multiple default emails using EmailJS
+// Send cart details to the customer's email and multiple default emails using EmailJS
 function sendCartToEmail() {
     const customerName = document.getElementById('customerName').value;
     const customerEmail = document.getElementById('customerEmail').value;
@@ -87,7 +88,17 @@ function sendCartToEmail() {
 
     let cartDetails = '';
     cart.forEach((item, index) => {
-        cartDetails += `Product ${index + 1}:\nType: ${item.type || 'N/A'}\nFlavor: ${item.flavor || 'N/A'}\nSize: ${item.size || 'N/A'}\n\n`;
+        let flavorDisplay = item.flavor || 'N/A';
+
+        if (item.type === 'Assorted Brownie') {
+            flavorDisplay = `Assorted Brownies: ${item.assortedFlavors ? item.assortedFlavors.join(", ") : 'No flavors selected'}`;
+        }
+
+        if (item.type && item.type.includes('assorted')) {
+            flavorDisplay = `Assorted ${capitalizeFirstLetter(item.type.split(' ')[0])}: ${item.assortedFlavors ? item.assortedFlavors.join(", ") : 'No flavors selected'}`;
+        }
+
+        cartDetails += `Product ${index + 1}:\nType: ${item.type || 'N/A'}\nFlavor: ${flavorDisplay}\nSize: ${item.size || 'N/A'}\n\n`;
     });
 
     emailjs.send("service_gso4hlk", "template_fbrba4c", {
@@ -113,6 +124,7 @@ function clearCartAndFields() {
 }
 
 // Send cart details through WhatsApp
+// Send cart details through WhatsApp
 function sendCartToWhatsApp() {
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
 
@@ -123,15 +135,25 @@ function sendCartToWhatsApp() {
 
     let cartDetails = 'Your Cart Details:\n';
     cart.forEach((item, index) => {
-        cartDetails += `Product ${index + 1}:\nType: ${item.type || 'N/A'}\nFlavor: ${item.flavor || 'N/A'}\nSize: ${item.size || 'N/A'}\n\n`;
+        let flavorDisplay = item.flavor || 'N/A';
+
+        if (item.type === 'Assorted Brownie') {
+            flavorDisplay = `Assorted Brownies: ${item.assortedFlavors ? item.assortedFlavors.join(", ") : 'No flavors selected'}`;
+        }
+
+        if (item.type && item.type.includes('assorted')) {
+            flavorDisplay = `Assorted ${capitalizeFirstLetter(item.type.split(' ')[0])}: ${item.assortedFlavors ? item.assortedFlavors.join(", ") : 'No flavors selected'}`;
+        }
+
+        cartDetails += `Product ${index + 1}:\nType: ${item.type || 'N/A'}\nFlavor: ${flavorDisplay}\nSize: ${item.size || 'N/A'}\n\n`;
     });
 
     const encodedCartDetails = encodeURIComponent(cartDetails);
     const whatsappUrl = `https://wa.me/918754322977?text=${encodedCartDetails}`;
-     clearCartAndFields(); // Clear cart and fields after sending email
+    clearCartAndFields(); // Clear cart and fields after sending
     window.open(whatsappUrl, '_blank'); // Open WhatsApp in a new tab
-   
 }
+
 
 // Initialize EmailJS
 document.addEventListener('DOMContentLoaded', function () {
