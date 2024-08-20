@@ -173,6 +173,11 @@
   height: 100%;
   object-fit: cover;
   display: block;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+.Theme-slideshow:hover img, .Dessert-slideshow:hover img, .Regular-slideshow:hover img, .NakedCake-slideshow:hover img, .Cheese-slideshow:hover img {
+  transform: scale(1.05);
+  opacity: 0.9;
 }
 
 .Theme-slideshow p, .Dessert-slideshow p, .Regular-slideshow p, .NakedCake-slideshow p, .Cheese-slideshow p {
@@ -201,5 +206,31 @@
     background-color: #f4a4a4; /* Background color for the active link */
     color: white; /* Text color for the active link */
     border: 2px solid #f4a4a4; /* Border color and width for the active link */
+}
+
+
+/* Define the keyframes for the fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Initial state for elements that should fade in */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* Final state when the element is visible */
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
