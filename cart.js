@@ -17,9 +17,15 @@ function loadCartItems() {
 
         let flavorDisplay = item.flavor || 'N/A';
 
+        if (item.type === 'Assorted Brownie') {
+            flavorDisplay = `Assorted Brownies: ${item.assortedFlavors ? item.assortedFlavors.join(", ") : 'No flavors selected'}`;
+        }
+
         if (item.type && item.type.includes('assorted')) {
             flavorDisplay = `Assorted ${capitalizeFirstLetter(item.type.split(' ')[0])}: ${item.assortedFlavors ? item.assortedFlavors.join(", ") : 'No flavors selected'}`;
         }
+      
+
 
         cartItemsDiv.innerHTML += `
             <div class="cart-item">
