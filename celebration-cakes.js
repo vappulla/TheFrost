@@ -113,3 +113,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const sections = document.querySelectorAll('.fade-in');
+
+    function checkVisibility() {
+        sections.forEach(section => {
+            const rect = section.getBoundingClientRect();
+            // Check if the section is within the viewport
+            if (rect.top < window.innerHeight && rect.bottom > 0) {
+                section.classList.add('visible');
+            }
+        });
+    }
+
+    window.addEventListener('scroll', checkVisibility);
+    checkVisibility(); // Initial check to handle cases where elements are already in view
+});
+
+
