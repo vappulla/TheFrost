@@ -104,14 +104,16 @@ body {
 .slideshow-container {
     position: relative;
     max-width: 100%; /* Make the slideshow container responsive */
-    height: 500px; /* Set a fixed height for consistency */
+    height: 400px; /* Set height to 400px */
     margin: 20px auto;
     overflow: hidden;
 }
 
 .mySlides {
     display: none;
-    height: 100%; /* Ensure slides take up the full height */
+    width: 500px; /* Set a fixed width for slides */
+    height: 400px; /* Set a fixed height for slides */
+    margin: 0 auto; /* Center the slides horizontally */
 }
 
 /* Fade effect */
