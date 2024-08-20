@@ -166,7 +166,13 @@
     height: 100%; /* Ensure image takes up the full container */
     object-fit: cover; /* Crop the images to fit the container */
     display: block;
+     transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
 }
+.DreamTin-slideshow:hover img, .TresLech-slideshow:hover img, .ClassicTub-slideshow:hover img {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
 
 .DreamTin-slideshow p, .TresLech-slideshow p, .ClassicTub-slideshow p {
     position: absolute; /* Position captions absolutely within the slide */
@@ -193,4 +199,22 @@
     background-color: #f4a4a4; /* Background color for the active link */
     color: white; /* Text color for the active link */
     border: 2px solid #f4a4a4; /* Border color and width for the active link */
+}
+
+
+/* CSS for fade-in effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
 }
