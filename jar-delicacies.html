@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jar Delicacies - The Frost</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="jar-delicacies.css">
+</head>
+<body>
+    <div class="header">
+        <img src="logo.jpg" alt="Logo" class="logo">
+        <div class="title">
+            <h1>Welcome To</h1>
+            <h2>The Frost</h2>
+            <h3>By Sai Saranya</h3>
+        </div>
+        <div class="nav">
+            <a href="index.html">Home</a>
+            <a href="snack-bites.html">Snack Bites</a>
+            <a href="celebration-cakes.html">Celebration Cakes</a>
+            <a href="jar-delicacies.html">Jar Delicacies</a>
+            <a href="cart.html">
+                <img src="cart.png" alt="Cart" class="cart">
+            </a>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="section">
+            <h2>Dream Tin</h2>
+            <p>
+                Our Dream Tin is filled with layers of rich, velvety mousse, cake crumbs, and fresh cream, offering a delightful blend of flavors and textures.
+            </p>
+            <!-- Menu Card for Dream Tin -->
+            <div class="menu-card">
+                <div class="flavors">
+                    <h4 class="underline">Our Specials</h4>
+                    <ul>
+                        <li>Classic Vanilla</li>
+                        <li>Dutch Chocolate <span class="star">&#9733;</span></li>
+                        <li>Irish Coffee Chocolate</li>
+                        <li>Nutella Chocolate</li>
+                        <li>Roasted Almond Chocolate <span class="star">&#9733;</span></li>
+                        <li>Rose Milk Pistachio</li>
+                        <li>Rasmalai Almond Pistachio <span class="star">&#9733;</span></li>
+                        <li>Mango Dulce (Seasonal)</li>
+                    </ul>
+                </div>
+                <div class="separator"></div>
+                <div class="description">
+                    <p style="margin-bottom: 20px;">
+                        The Dream Tin is a delightful assortment of rich, creamy flavors beautifully layered in a convenient tin, perfect for gifting or indulging in a sweet treat. Each Dream Tin offers a unique taste experience, from classic vanilla to indulgent mango or coffee, ensuring there's a flavor for every craving.
+                    </p>
+                    <p><b>Available in multiple sizes, including Mini (250 gms) and Regular (500 gms).</b></p>
+                </div>
+            </div>
+
+            <div class="DreamTin-slideshow">
+
+                <div class="slide">
+                    <img src="IMG_7868.JPG" alt="Belgium Chocolate: Dark Chocolate and Milk">
+                    <p>Belgium Chocolate: Dark Chocolate and Milk</p>
+                </div>
+                <div class="slide">
+                       <img src="IMG_0145.jpg" alt="Nutella Hazlenut">
+                       <p>Nutella Hazlenut</p>
+                   </div>
+
+            </div>
+
+            <!-- Dropdown Menus for Dream Tin -->
+            <div class="dropdown">
+                <div class="group">
+                    <label for="DreamTinFlavors">Flavors</label>
+                    <select id="DreamTinFlavors">
+                        <option value="">Select Flavor</option>
+                        <optgroup label="Our Specials">
+                            <option value="Classic Vanilla">Classic Vanilla</option>
+                            <option value="Dutch Chocolate">Dutch Chocolate <span class="star">&#9733;</span></option>
+                            <option value="Irish Coffee Chocolate">Irish Coffee Chocolate</option>
+                            <option value="Nutella Chocolate">Nutella Chocolate</option>
+                            <option value="Roasted Almond Chocolate">Roasted Almond Chocolate <span class="star">&#9733;</span></option>
+                            <option value="Rose Milk Pistachio">Rose Milk Pistachio</option>
+                            <option value="Rasmalai Almond Pistachio">Rasmalai Almond Pistachio <span class="star">&#9733;</span></option>
+                            <option value="Mango Dulce">Mango Dulce</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <div class="group">
+                    <label for="DreamTinSizes">Sizes</label>
+                    <select id="DreamTinSizes">
+                        <option value="">Select Size</option>
+                        <optgroup label="Sizes">
+                            <option value="250 gms">Mini (250 gms)</option>
+                            <option value="500 gms">Regular (500 gms)</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <div class="group">
+                    <button id="addDreamTinToCartBtn" onclick="addDreamTinToCart()">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Tres Lech</h2>
+            <p>
+                Tres Lech is a moist and creamy dessert soaked in three kinds of milk, topped with whipped cream and a sprinkle of cinnamon.
+            </p>
+            <!-- Menu Card for Tres Lech -->
+            <div class="menu-card">
+                <div class="flavors">
+                    <h4 class="underline">Our Specials</h4>
+                    <ul>
+                        <li>Classic Vanilla <span class="star">&#9733;</span></li>
+                        <li>Vanilla Gulab Jamun</li>
+                        <li>Classic Chocolate</li>
+                        <li>Coffee Shop <span class="star">&#9733;</span></li>
+                        <li>Nutella Scoop</li>
+                        <li>Almond Nutella</li>
+                        <li>Rose Milk Pistachio <span class="star">&#9733;</span></li>
+                        <li>Rasmalai Almond Pistachio</li>
+                        <li>Mango Dulce <span class="star">&#9733;</span></li>
+                        <li>Lotus Biscoff Crunch</li>
+                    </ul>
+                </div>
+                <div class="separator"></div>
+                <div class="description">
+                    <p style="margin-bottom: 20px;">
+                        A sponge cake soaked in flavored milk and topped with nuts, chocolate, etc.
+                    </p>
+                    <p><b>Available in multiple sizes, including Mini (250 gms) and Regular (500 gms).</b></p>
+                </div>
+            </div>
+
+            <div class="TresLech-slideshow">
+
+                <div class="slide">
+                    <img src="IMG_0135.jpg" alt="Rasmalai Almond Pistachio">
+                    <p>Rasmalai Almond Pistachio</p>
+                </div>
+                <div class="slide">
+                    <img src="IMG_0136.jpg" alt="Mango Dulce">
+                    <p>Mango Dulce</p>
+                </div>
+                <div class="slide">
+                    <img src="IMG_0137.jpg" alt="Rose Milk Pistachio">
+                    <p>Rose Milk Pistachio</p>
+                </div>
+                <div class="slide">
+                    <img src="IMG_0139.jpg" alt="Vanilla Gulab Jamun">
+                    <p>Vanilla Gulab Jamun</p>
+                </div>
+
+                <div class="slide">
+                    <img src="IMG_0138.jpg" alt="Lotus Biscoff Crunch">
+                    <p>Lotus Biscoff Crunch</p>
+                </div>
+                <div class="slide">
+                    <img src="IMG_0140.jpg" alt="Rose Milk Pistachio">
+                    <p>Rose Milk Pistachio</p>
+                </div>
+            </div>
+
+            <!-- Dropdown Menus for Tres Lech -->
+            <div class="dropdown">
+                <div class="group">
+                    <label for="TresLechFlavors">Flavors</label>
+                    <select id="TresLechFlavors">
+                        <option value="">Select Flavor</option>
+                        <optgroup label="Our Specials">
+                            <option value="Classic Vanilla">Classic Vanilla <span class="star">&#9733;</span></option>
+                            <option value="Vanilla Gulab Jamun">Vanilla Gulab Jamun</option>
+                            <option value="Classic Chocolate">Classic Chocolate</option>
+                            <option value="Coffee Shop">Coffee Shop <span class="star">&#9733;</span></option>
+                            <option value="Nutella Scoop">Nutella Scoop</option>
+                            <option value="Almond Nutella">Almond Nutella</option>
+                            <option value="Rose Milk Pistachio">Rose Milk Pistachio <span class="star">&#9733;</span></option>
+                            <option value="Rasmalai Almond Pistachio">Rasmalai Almond Pistachio</option>
+                            <option value="Mango Dulce">Mango Dulce <span class="star">&#9733;</span></option>
+                            <option value="Lotus Biscoff Crunch">Lotus Biscoff Crunch</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <div class="group">
+                    <label for="TresLechSizes">Sizes</label>
+                    <select id="TresLechSizes">
+                        <option value="">Select Size</option>
+                        <optgroup label="Sizes">
+                            <option value="250 gms">Mini (250 gms)</option>
+                            <option value="500 gms">Regular (500 gms)</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <div class="group">
+                    <button id="addTresLechToCartBtn" onclick="addTresLechToCart()">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Classic Tubs</h2>
+            <p>
+                Our Classic Tubs offer a variety of flavors, each one carefully crafted to deliver the perfect balance of sweetness and richness in every bite.
+            </p>
+            <!-- Menu Card for Classic Tubs -->
+            <div class="menu-card">
+                <div class="flavors">
+                    <h4 class="underline">Go-to Flavors</h4>
+                    <ul>
+                        <li>Classic Vanilla</li>
+                        <li>Classic Chocolate</li>
+                        <li>Chocolate Truffle</li>
+                    </ul>
+                    <h4>Exotic Chunkies</h4>
+                    <ul>
+                        <li>Nutella Scoop</li>
+                        <li>Tiramisu Shot</li>
+                        <li>Brownie Crumble</li>
+                        <li>Kitkat Twist</li>
+                        <li>Oreo Cream Cheese</li>
+                        <li>Red Velvet Cream Cheese</li>
+                        <li>Vanilla Lotus Biscoff</li>
+                        <li>Mango Dulce (Seasonal)</li>
+                        <li>Rasmalai Almond</li>
+                        <li>Rose Milk Pistachio</li>
+                        <li>Vanilla Gulab Jamun</li>
+                    </ul>
+                </div>
+                <div class="separator"></div>
+                <div class="description">
+                    <p style="margin-bottom: 20px;">
+                        These jars are filled with a moist cake layered with gooey, fudgy, and well-designed combinations of fillings and toppings, providing a spoonful of sweetness in a chunky dessert.
+                    </p>
+                    <p><b>Available in multiple sizes, including Mini (250 gms) and Regular (500 gms).</b></p>
+                </div>
+            </div>
+
+            <div class="ClassicTub-slideshow">
+
+                <div class="slide">
+                    <img src="1eb7d64c-f84f-414a-b836-c5afb6a9a2b7.JPG" alt="Classic Chocolate">
+                    <p>Classic Chocolate</p>
+                </div>
+                <div class="slide">
+                    <img src="8e270283-c7ac-4c0c-a2e3-1bf344d7fbab.JPG" alt="Classic Vanilla">
+                    <p>Classic Vanilla</p>
+                </div>
+                <div class="slide">
+                    <img src="75499982-6b10-459b-9e50-4ca1fb9b2cf5.JPG" alt="Cookie Crumble">
+                    <p>Cookie Crumble</p>
+                </div>
+                <div class="slide">
+                    <img src="c7e9e8e1-1082-4d45-bd37-19fb59cb43d1.JPG" alt="Mango Dulce">
+                    <p>Mango Dulce</p>
+                </div>
+
+                <div class="slide">
+                    <img src="IMG_0144.jpg" alt="Tiramisu Shot">
+                    <p>Tiramisu Shot</p>
+                </div>
+               
+            </div>
+
+            
+            <!-- Dropdown Menus for Classic Tub -->
+            <div class="dropdown">
+                <div class="group">
+                    <label for="ClassicTubFlavors">Flavors</label>
+                    <select id="ClassicTubFlavors">
+                        <option value="">Select Flavor</option>
+                        <optgroup label="Go-to Flavors">
+                            <option value="Classic Vanilla">Classic Vanilla</option>
+                            <option value="Classic Chocolate">Classic Chocolate</option>
+                            <option value="Chocolate Truffle">Chocolate Truffle</option>
+                        </optgroup>
+                        <optgroup label="Exotic Chunkies">
+                            <option value="Nutella Scoop">Nutella Scoop</option>
+                            <option value="Tiramisu Shot">Tiramisu Shot</option>
+                            <option value="Brownie Crumble">Brownie Crumble</option>
+                            <option value="Kitkat Twist">Kitkat Twist</option>
+                            <option value="Oreo Cream Cheese">Oreo Cream Cheese</option>
+                            <option value="Red Velvet Cream Cheese">Red Velvet Cream Cheese</option>
+                            <option value="Vanilla Lotus Biscoff">Vanilla Lotus Biscoff</option>
+                            <option value="Mango Dulce (Seasonal)">Mango Dulce (Seasonal)</option>
+                            <option value="Rasmalai Almond">Rasmalai Almond</option>
+                            <option value="Rose Milk Pistachio">Rose Milk Pistachio</option>
+                            <option value="Vanilla Gulab Jamun">Vanilla Gulab Jamun</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <div class="group">
+                    <label for="ClassicTubSizes">Sizes</label>
+                    <select id="ClassicTubSizes">
+                        <option value="">Select Size</option>
+                        <optgroup label="Sizes">
+                            <option value="250 gms">Mini (250 gms)</option>
+                            <option value="500 gms">Regular (500 gms)</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <div class="group">
+                    <button id="addClassicTubToCartBtn" onclick="addClassicTubToCart()">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="contact-left">
+            <a href="https://instagram.com/thefrost_in" target="_blank">
+                <img src="Instagram.png" alt="Instagram" style="width:24px; height:24px; vertical-align:middle;"> @thefrost_in
+            </a>
+            <br>
+            <a href="https://wa.me/918754322977" target="_blank">
+                <img src="whatsapp.webp" alt="WhatsApp" style="width:24px; height:24px; vertical-align:middle;"> +91 8754322977
+            </a>
+        </div>
+        <div class="contact-right">
+            <a href="https://youtube.com/@thefrostbyss?si=aWVBH3erqZlt2oTQ" target="_blank">
+                <img src="Youtube.png" alt="YouTube" style="width:24px; height:24px; vertical-align:middle;"> Subscribe to The Frost
+            </a>
+        </div>
+    </div>
+    <script src="jar-delicacies.js"></script>
+</body>
+</html>

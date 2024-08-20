@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Frost - Cart</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #ffb6c1; /* Background color for the cart page */
+        }
+
+        .cart-content {
+            padding: 20px;
+        }
+
+        .cart-item {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 10px;
+            margin-bottom: 10px;
+            background-color: #f9f9f9;
+            position: relative;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .delete-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        .delete-button:hover {
+            background-color: #c0392b;
+        }
+
+        .footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-left, .contact-right {
+            display: flex;
+            align-items: center;
+        }
+
+        .contact-left img, .contact-right img {
+            margin-right: 10px;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: black; /* Or any color that fits your design */
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Style for the active link */
+        .nav a.active {
+            background-color: #f4a4a4; /* Background color for the active link */
+            color: white; /* Text color for the active link */
+            border: 2px solid #f4a4a4; /* Border color and width for the active link */
+        }
+
+        .email-form {
+            margin-top: 20px;
+        }
+
+        .email-form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .email-form input[type="text"],
+        .email-form input[type="email"] {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            width: calc(100% - 22px); /* Adjust width to fit within container */
+        }
+
+        .email-form button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .email-form button:hover {
+            background-color: #45a049;
+        }
+
+        #errorMessage {
+            color: red;
+            display: none; /* Hide error message by default */
+            margin-top: 10px;
+        }
+
+        /* Additional styles for the WhatsApp button */
+        .whatsapp-button {
+            background-color: #25D366;
+            margin-left: 10px; /* Add margin to separate from the email button */
+        }
+
+        .whatsapp-button:hover {
+            background-color: #1EBE57;
+        }
+
+        /* Note for WhatsApp */
+        .whatsapp-note {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="logo.jpg" alt="Logo" class="logo">
+        <div class="title">
+            <h1>Welcome To</h1>
+            <h2>The Frost</h2>
+            <h3>By Sai Saranya</h3>
+        </div>
+        <div class="nav">
+            <a href="index.html">Home</a>
+            <a href="snack-bites.html">Snack Bites</a>
+            <a href="celebration-cakes.html" >Celebration Cakes</a>
+            <a href="jar-delicacies.html">Jar Delicacies</a>
+            <a href="cart.html" class="active">
+                <img src="cart.png" alt="Cart" class="cart">
+            </a>
+        </div>
+    </div>
+    <div class="cart-content">
+        <h2>Your Cart</h2>
+        <div id="cartItems"></div>
+        <form id="emailForm" class="email-form">
+            <label for="customerName">Enter your name:</label>
+            <input type="text" id="customerName" name="customerName" required>
+            <label for="customerEmail">Enter your email:</label>
+            <input type="email" id="customerEmail" name="customerEmail" required>
+            <button type="button" onclick="sendCartToEmail()">Send to Email</button>
+            <button type="button" class="whatsapp-button" onclick="sendCartToWhatsApp()">Send via WhatsApp</button>
+            <p id="errorMessage">Please enter your name and email.</p>
+            <p class="whatsapp-note">Note: When sending via WhatsApp, only your name is required.</p>
+        </form>
+    </div>
+
+    <div class="footer">
+        <div class="contact-left">
+            <a href="https://instagram.com/thefrost_in" target="_blank">
+                <img src="Instagram.png" alt="Instagram" style="width:24px; height:24px; vertical-align:middle;"> @thefrost_in
+            </a>
+            <br>
+            <a href="https://wa.me/918754322977" target="_blank">
+                <img src="whatsapp.webp" alt="WhatsApp" style="width:24px; height:24px; vertical-align:middle;"> +91 8754322977
+            </a>
+        </div>
+        <div class="contact-right">
+            <a href="https://youtube.com/@thefrostbyss?si=aWVBH3erqZlt2oTQ" target="_blank">
+                <img src="Youtube.png" alt="YouTube" style="width:24px; height:24px; vertical-align:middle;"> Subscribe to The Frost
+            </a>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="cart.js"></script>
+</body>
+</html>
