@@ -126,14 +126,14 @@ function updateFlavors() {
     }
 }
 
-
 // Function to add brownie to cart
 function addToCart() {
     const brownieType = document.getElementById('brownieType').value;
-    const flavor = document.getElementById('flavors').value;
+    const flavorsSelect = document.getElementById('flavors');
     const size = document.getElementById('sizes').value;
 
-    if (!brownieType || (brownieType !== 'bento' && (!flavor || !size))) {
+    // Validate selection
+    if (!brownieType || (brownieType !== 'bento' && (!size || (brownieType !== 'Assorted Brownie' && !flavorsSelect.value)))) {
         alert('Please select all required options.');
         return;
     }
@@ -141,9 +141,23 @@ function addToCart() {
     // Create a cart item object
     const cartItem = {
         type: brownieType,
-        flavor: flavor,
         size: size,
     };
+
+    if (brownieType === 'Assorted Brownie') {
+        // Get all selected flavors for Assorted Brownie
+        const selectedFlavors = Array.from(flavorsSelect.selectedOptions).map(option => option.value);
+
+        if (selectedFlavors.length === 0) {
+            alert('Please select at least one flavor for Assorted Brownies.');
+            return;
+        }
+
+        cartItem.flavor = 'Assorted';
+        cartItem.assortedFlavors = selectedFlavors; // Save selected flavors
+    } else {
+        cartItem.flavor = flavorsSelect.value; // For other brownie types, save single flavor
+    }
 
     // Store cart item in localStorage
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
@@ -151,8 +165,10 @@ function addToCart() {
     localStorage.setItem('cart', JSON.stringify(cart));
 
     // Display confirmation
-    alert('Item added to cart!');
+    const displayFlavor = brownieType === 'Assorted Brownie' ? 'Assorted Brownies: ' + cartItem.assortedFlavors.join(", ") : cartItem.flavor;
+    alert('Item added to cart: ' + displayFlavor + ' - ' + size);
 }
+
 
 function updateCookieFlavors() {
     const flavor = document.getElementById('cookieFlavors').value;
