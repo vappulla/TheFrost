@@ -8,13 +8,14 @@
     <link rel="stylesheet" href="style.css">
     <style>
         /* Inline CSS to move subsections to the left and style the menu card */
+        /* Base styles for all devices */
         .content {
             padding: 20px;
-            margin-top: 40px; /* Add space above the slides */
+            margin-top: 40px;
         }
 
         .section {
-            margin-bottom: 40px; /* Increased space below the section */
+            margin-bottom: 40px;
         }
 
         .subsection {
@@ -32,6 +33,7 @@
             display: flex;
             flex-direction: row;
             justify-content: space-between;
+            flex-wrap: wrap;
         }
 
         .menu-card h4 {
@@ -55,28 +57,25 @@
         }
 
         .separator {
-            width: 1px; /* Make the line narrower */
+            width: 1px;
             background-color: #ccc;
-            height: auto; /* Set the height to 4 inches */
-            margin-left: 2in; /* Move the lines to the right by 3 inches */
-            margin-right: 0; /* Ensure no margin on the right */
+            height: auto;
+            margin-left: 2in;
+            margin-right: 0;
         }
 
         .description {
             flex: 1;
             font-family: 'Dancing Script', cursive;
-            font-size: 30px; /* Increase the font size */
-            padding-left: 20px; /* Move the description to the right */
-            border-left: 1px solid #ccc; /* Make the left border narrower */
-            padding-top: 100px; /* Add top padding to move the description down */
+            font-size: 30px;
+            padding-left: 20px;
+            border-left: 1px solid #ccc;
+            padding-top: 100px;
         }
 
-        .description b {
-            font-size: 20px; /* Match the font size for bold text */
-        }
-
+        .description b,
         .description strong {
-            font-size: 20px; /* Match the font size for strong text */
+            font-size: 20px;
         }
 
         .dropdown {
@@ -99,62 +98,60 @@
             padding: 8px;
             font-size: 16px;
         }
+
         .brownie-slideshow, .brownieAssorted-slideshow, .brownieSlab-slideshow, .brownieBento-slideshow, .Cookie-slideshow, .Cupcake-slideshow, .Muffin-slideshow {
             position: relative;
             max-width: 500px;
-            margin: 20px auto; /* Adds space above the slideshow */
+            margin: 20px auto;
             overflow: hidden;
-            height: 400px; /* Set a fixed height for the container */
+            height: 400px;
         }
 
         .brownie-slideshow .slide, .brownieAssorted-slideshow .slide, .brownieSlab-slideshow .slide, .brownieBento-slideshow .slide, .Cookie-slideshow .slide, .Cupcake-slideshow .slide, .Muffin-slideshow .slide {
             position: relative;
             width: 100%;
-            height: 100%; /* Ensure slides take up the full height */
+            height: 100%;
         }
 
         .brownie-slideshow img, .brownieAssorted-slideshow img, .brownieSlab-slideshow img, .brownieBento-slideshow img, .Cookie-slideshow img, .Cupcake-slideshow img, .Muffin-slideshow img {
             width: 100%;
-            height: 100%; /* Ensure image takes up the full container */
-            object-fit: cover; /* Crop the images to fit the container */
+            height: 100%;
+            object-fit: cover;
             display: block;
             transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
         }
+
         .brownie-slideshow:hover img, .brownieAssorted-slideshow:hover img, .brownieSlab-slideshow:hover img, .brownieBento-slideshow:hover img, .Cookie-slideshow:hover img, .Cupcake-slideshow:hover img, .Muffin-slideshow:hover img {
             transform: scale(1.05);
             opacity: 0.9;
         }
 
-
         .brownie-slideshow p, .brownieAssorted-slideshow p, .brownieSlab-slideshow p, .brownieBento-slideshow p, .Cookie-slideshow p, .Cupcake-slideshow p, .Muffin-slideshow p {
-            position: absolute; /* Position captions absolutely within the slide */
-            top: 0; /* Place captions at the top of the image */
+            position: absolute;
+            top: 0;
             width: 100%;
             padding: 10px;
             font-size: 16px;
-            font-weight: bold; /* Make captions bold */
+            font-weight: bold;
             color: #333;
             background: rgba(255, 255, 255, 0.7);
-            text-align: center; /* Center align text within the caption block */
+            text-align: center;
             box-sizing: border-box;
         }
 
         .nav a {
             text-decoration: none;
-            color: black; /* Or any color that fits your design */
+            color: black;
             padding: 10px;
             border-radius: 5px;
             transition: background-color 0.3s ease;
         }
 
-        /* Style for the active link */
         .nav a.active {
-            background-color: #f4a4a4; /* Background color for the active link */
-            color: white; /* Text color for the active link */
-            border: 2px solid #f4a4a4; /* Border color and width for the active link */
+            background-color: #f4a4a4;
+            color: white;
+            border: 2px solid #f4a4a4;
         }
-
-        
 
         /* CSS for fade-in effect */
         @keyframes fadeIn {
@@ -173,13 +170,7 @@
             animation: fadeIn 1s ease-in-out forwards;
         }
 
-
-
-
-
-
-
-        #addToCartBtn, #addCupcakeToCartBtn, #addCookieToCartBtn,  #addMuffinToCartBtn {
+        #addToCartBtn, #addCupcakeToCartBtn, #addCookieToCartBtn, #addMuffinToCartBtn {
             margin-top: 20px;
             padding: 10px 20px;
             font-size: 16px;
@@ -192,16 +183,48 @@
             transition: background 0.3s ease, box-shadow 0.3s ease;
         }
 
-         #addToCartBtn, #addCupcakeToCartBtn:hover, #addCookieToCartBtn:hover, #addMuffinToCartBtn:hover {
+        #addToCartBtn, #addCupcakeToCartBtn:hover, #addCookieToCartBtn:hover, #addMuffinToCartBtn:hover {
             background: linear-gradient(45deg, #6a1b9a, #8e44ad);
             box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
         }
 
-        .cart {
-            width: 24px;
-            height: 24px;
-            vertical-align: middle;
+        /* Responsive design adjustments */
+        @media (max-width: 768px) {
+            .content {
+                padding: 10px;
+                margin-top: 20px;
+            }
+
+            .menu-card {
+                flex-direction: column;
+                padding: 10px;
+            }
+
+            .description {
+                font-size: 24px;
+                padding-left: 10px;
+                padding-top: 50px;
+            }
+
+            .separator {
+                margin-left: 1in;
+            }
+
+            .nav a {
+                padding: 8px;
+            }
+
+            .dropdown {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .brownie-slideshow, .brownieAssorted-slideshow, .brownieSlab-slideshow, .brownieBento-slideshow, .Cookie-slideshow, .Cupcake-slideshow, .Muffin-slideshow {
+                max-width: 100%;
+                height: auto;
+            }
         }
+
     </style>
 </head>
 <body>
