@@ -6,143 +6,10 @@
     <title>The Frost - Cart</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap">
     <link rel="stylesheet" href="style.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #ffb6c1; /* Background color for the cart page */
-        }
-
-        .cart-content {
-            padding: 20px;
-        }
-
-        .cart-item {
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            padding: 10px;
-            margin-bottom: 10px;
-            background-color: #f9f9f9;
-            position: relative;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-
-        .delete-button {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background-color: #e74c3c;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            padding: 5px 10px;
-            cursor: pointer;
-        }
-
-        .delete-button:hover {
-            background-color: #c0392b;
-        }
-
-        .footer {
-            background-color: #333;
-            color: white;
-            padding: 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-
-        .footer a {
-            color: white;
-            text-decoration: none;
-        }
-
-        .footer a:hover {
-            text-decoration: underline;
-        }
-
-        .contact-left, .contact-right {
-            display: flex;
-            align-items: center;
-        }
-
-        .contact-left img, .contact-right img {
-            margin-right: 10px;
-        }
-
-        .nav a {
-            text-decoration: none;
-            color: black; /* Or any color that fits your design */
-            padding: 10px;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-
-        /* Style for the active link */
-        .nav a.active {
-            background-color: #f4a4a4; /* Background color for the active link */
-            color: white; /* Text color for the active link */
-            border: 2px solid #f4a4a4; /* Border color and width for the active link */
-        }
-
-        .email-form {
-            margin-top: 20px;
-        }
-
-        .email-form label {
-            display: block;
-            margin-bottom: 5px;
-        }
-
-        .email-form input[type="text"],
-        .email-form input[type="email"] {
-            padding: 10px;
-            border-radius: 5px;
-            border: 1px solid #ddd;
-            width: calc(100% - 22px); /* Adjust width to fit within container */
-        }
-
-        .email-form button {
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            padding: 10px;
-            cursor: pointer;
-            margin-top: 10px;
-        }
-
-        .email-form button:hover {
-            background-color: #45a049;
-        }
-
-        #errorMessage {
-            color: red;
-            display: none; /* Hide error message by default */
-            margin-top: 10px;
-        }
-
-        /* Additional styles for the WhatsApp button */
-        .whatsapp-button {
-            background-color: #25D366;
-            margin-left: 10px; /* Add margin to separate from the email button */
-        }
-
-        .whatsapp-button:hover {
-            background-color: #1EBE57;
-        }
-
-        /* Note for WhatsApp */
-        .whatsapp-note {
-            margin-top: 10px;
-            font-size: 14px;
-            color: #555;
-        }
-    </style>
+     <link rel="stylesheet" href="cart.css">
+    <!-- Include the updated CSS styles here -->
 </head>
-<body>
+<body class="cart-page">
     <div class="header">
         <img src="logo.jpg" alt="Logo" class="logo">
         <div class="title">
@@ -153,7 +20,7 @@
         <div class="nav">
             <a href="index.html">Home</a>
             <a href="snack-bites.html">Snack Bites</a>
-            <a href="celebration-cakes.html" >Celebration Cakes</a>
+            <a href="celebration-cakes.html">Celebration Cakes</a>
             <a href="jar-delicacies.html">Jar Delicacies</a>
             <a href="cart.html" class="active">
                 <img src="cart.png" alt="Cart" class="cart">
