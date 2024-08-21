@@ -1,178 +1,17 @@
-
-/* General styles */
-
-.content {
-  padding-left: 150px;
-  margin-top: 40px;
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.section {
-  margin-bottom: 40px;
+header {
+    background: #f8f8f8;
+    padding: 10px 20px;
+    text-align: center;
 }
 
-.subsection {
-  text-align: left;
-  margin-left: 0;
-  padding-left: 100px;
-}
-
-.menu-card {
-  width: 80%;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 20px;
-  margin-top: 10px;
-  margin-left: 50px;
-  background-color: #f9f9f9;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.menu-card h4 {
-  margin-top: 0;
-  font-size: 16px;
-  font-weight: bold;
-}
-
-.menu-card ul {
-  list-style-type: none;
-  padding-left: 0;
-}
-
-.menu-card ul li {
-  padding: 3px 0;
-}
-
-.star {
-  color: gold;
-  margin-left: 5px;
-}
-
-.separator {
-  width: 1px;
-  background-color: #ccc;
-  height: auto;
-  margin-left: 1in;
-  margin-right: 0;
-}
-
-.description {
-  flex: 1;
-  font-family: 'Dancing Script', cursive;
-  font-size: 20px;
-  padding-left: 100px;
-  border-left: 1px solid #ccc;
-  padding-top: 100px;
-}
-
-.description b {
-  font-size: 30px;
-}
-
-.description strong {
-  font-size: 20px;
-}
-
-.dropdown {
-  display: flex;
-  gap: 20px;
-  margin-top: 20px;
-}
-
-.group {
-  flex: 1;
-}
-
-.group label {
-  display: block;
-  margin-bottom: 5px;
-}
-
-.group select {
-  width: 100%;
-  padding: 8px;
-  font-size: 16px;
-}
-
-.flavor-columns {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.flavor-columns ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  width: 180px;
-}
-
-#addRegularToCartBtn, #addNakedCakeToCartBtn, #addCheeseCakeToCartBtn {
-  margin-top: 20px;
-  padding: 10px 20px;
-  font-size: 16px;
-  background: linear-gradient(45deg, #8e44ad, #6a1b9a);
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: background 0.3s ease, box-shadow 0.3s ease;
-}
-
-#addRegularToCartBtn:hover, #addNakedCakeToCartBtn:hover, #addCheeseCakeToCartBtn:hover {
-  background: linear-gradient(45deg, #6a1b9a, #8e44ad);
-  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
-}
-
-.cart {
-  width: 24px;
-  height: 24px;
-  vertical-align: middle;
-}
-
-.Theme-slideshow, .Dessert-slideshow, .Regular-slideshow, .NakedCake-slideshow, .Cheese-slideshow {
-  position: relative;
-  max-width: 500px;
-  margin: 20px auto;
-  overflow: hidden;
-  height: 400px;
-}
-
-.Theme-slideshow .slide, .Dessert-slideshow .slide, .Regular-slideshow .slide, .NakedCake-slideshow .slide, .Cheese-slideshow .slide {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-
-.Theme-slideshow img, .Dessert-slideshow img, .Regular-slideshow img, .NakedCake-slideshow img, .Cheese-slideshow img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
-}
-
-.Theme-slideshow:hover img, .Dessert-slideshow:hover img, .Regular-slideshow:hover img, .NakedCake-slideshow:hover img, .Cheese-slideshow:hover img {
-  transform: scale(1.05);
-  opacity: 0.9;
-}
-
-.Theme-slideshow p, .Dessert-slideshow p, .Regular-slideshow p, .NakedCake-slideshow p, .Cheese-slideshow p {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  padding: 10px;
-  font-size: 16px;
-  font-weight: bold;
-  color: #333;
-  background: rgba(255, 255, 255, 0.7);
-  text-align: center;
-  box-sizing: border-box;
-}
-
-/* Style for navigation links */
 .nav a {
   text-decoration: none;
   color: black;
@@ -181,75 +20,257 @@
   transition: background-color 0.3s ease;
 }
 
-/* Style for the active link */
 .nav a.active {
   background-color: #f4a4a4;
   color: white;
   border: 2px solid #f4a4a4;
 }
 
-/* Define the keyframes for the fade-in animation */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+
+
+.content {
+    padding-left: 150px;
+    margin-top: 40px;
 }
 
-/* Initial state for elements that should fade in */
-.fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 1s ease-out, transform 1s ease-out;
+.section {
+    margin-bottom: 40px;
 }
 
-/* Final state when the element is visible */
-.fade-in.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Responsive styles for mobile */
-@media (max-width: 768px) {
-  .content {
-    padding-left: 20px;
-    margin-top: 20px;
-  }
-
-  .subsection {
-    padding-left: 20px;
-  }
-
-  .menu-card {
-    width: 100%;
+.subsection {
+    text-align: left;
     margin-left: 0;
-    padding: 15px;
-    flex-direction: column;
-  }
+    padding-left: 100px;
+}
 
-  .description {
-    padding-left: 20px;
-    padding-top: 20px;
+.menu-card {
+    width: 90%;
+    max-width: 700px; /* Increased max-width for better desktop appearance */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px auto;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.menu-card h4 {
+    margin-top: 0;
     font-size: 18px;
-  }
+    font-weight: bold;
+}
 
-  .dropdown {
-    flex-direction: column;
+.menu-card ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.menu-card ul li {
+    padding: 5px 0;
+}
+
+.star {
+    color: gold;
+    margin-left: 5px;
+}
+
+.separator {
+    width: 1px;
+    background-color: #ccc;
+    height: auto;
+    margin-left: 1in;
+    margin-right: 0;
+}
+
+.description {
+    flex: 1;
+    font-family: 'Dancing Script', cursive;
+    font-size: 20px;
+    padding-left: 100px;
+    border-left: 1px solid #ccc;
+    padding-top: 100px;
+}
+
+.description b {
+    font-size: 30px;
+}
+
+.description strong {
+    font-size: 20px;
+}
+
+.dropdown {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.group {
+    flex: 1;
+}
+
+.group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.group select {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+}
+
+.flavor-columns {
+    display: flex;
+    flex-wrap: wrap;
     gap: 10px;
-    margin-bottom: 50px;
-    padding-left: 10px;
-  }
+}
 
-  .Theme-slideshow, .Dessert-slideshow, .Regular-slideshow, .NakedCake-slideshow, .Cheese-slideshow {
-    height: 300px;
-  }
+.flavor-columns ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 180px;
+}
 
-  .Theme-slideshow p, .Dessert-slideshow p, .Regular-slideshow p, .NakedCake-slideshow p, .Cheese-slideshow p {
-    font-size: 14px;
-    padding: 5px;
-  }
+#addRegularToCartBtn, #addNakedCakeToCartBtn, #addCheeseCakeToCartBtn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background: linear-gradient(45deg, #8e44ad, #6a1b9a);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+#addRegularToCartBtn:hover, #addNakedCakeToCartBtn:hover, #addCheeseCakeToCartBtn:hover {
+    background: linear-gradient(45deg, #6a1b9a, #8e44ad);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.cart {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+}
+
+/* Slideshow Styles */
+.brownie-slideshow, .brownieAssorted-slideshow, .brownieSlab-slideshow, .brownieBento-slideshow, .Cookie-slideshow, .Cupcake-slideshow, .Muffin-slideshow {
+    position: relative;
+    max-width: 500px;
+    margin: 20px auto;
+    overflow: hidden;
+    height: 400px;
+}
+
+.brownie-slideshow .slide, .brownieAssorted-slideshow .slide, .brownieSlab-slideshow .slide, .brownieBento-slideshow .slide, .Cookie-slideshow .slide, .Cupcake-slideshow .slide, .Muffin-slideshow .slide {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.brownie-slideshow img, .brownieAssorted-slideshow img, .brownieSlab-slideshow img, .brownieBento-slideshow img, .Cookie-slideshow img, .Cupcake-slideshow img, .Muffin-slideshow img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.brownie-slideshow:hover img, .brownieAssorted-slideshow:hover img, .brownieSlab-slideshow:hover img, .brownieBento-slideshow:hover img, .Cookie-slideshow:hover img, .Cupcake-slideshow:hover img, .Muffin-slideshow:hover img {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+.brownie-slideshow p, .brownieAssorted-slideshow p, .brownieSlab-slideshow p, .brownieBento-slideshow p, .Cookie-slideshow p, .Cupcake-slideshow p, .Muffin-slideshow p {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    background: rgba(255, 255, 255, 0.7);
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* Celebration Cakes Slideshow Styles */
+.Theme-slideshow, .Dessert-slideshow, .Regular-slideshow, .NakedCake-slideshow, .Cheese-slideshow {
+    position: relative;
+    max-width: 500px;
+    margin: 20px auto;
+    overflow: hidden;
+    height: 400px;
+}
+
+.Theme-slideshow .slide, .Dessert-slideshow .slide, .Regular-slideshow .slide, .NakedCake-slideshow .slide, .Cheese-slideshow .slide {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.Theme-slideshow img, .Dessert-slideshow img, .Regular-slideshow img, .NakedCake-slideshow img, .Cheese-slideshow img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.Theme-slideshow:hover img, .Dessert-slideshow:hover img, .Regular-slideshow:hover img, .NakedCake-slideshow:hover img, .Cheese-slideshow:hover img {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+.Theme-slideshow p, .Dessert-slideshow p, .Regular-slideshow p, .NakedCake-slideshow p, .Cheese-slideshow p {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    background: rgba(255, 255, 255, 0.7);
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .content {
+        padding-left: 20px;
+    }
+
+    .section, .subsection {
+        padding-left: 0;
+    }
+
+    .description {
+        padding-left: 20px;
+    }
+
+    .menu-card {
+        width: 100%;
+        max-width: none;
+    }
+
+    .brownie-slideshow, .brownieAssorted-slideshow, .brownieSlab-slideshow, .brownieBento-slideshow, .Cookie-slideshow, .Cupcake-slideshow, .Muffin-slideshow,
+    .Theme-slideshow, .Dessert-slideshow, .Regular-slideshow, .NakedCake-slideshow, .Cheese-slideshow {
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 769px) {
+    .menu-card {
+        width: 90%;
+        max-width: 700px; /* Adjust width for better appearance on desktops */
+    }
 }
