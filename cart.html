@@ -7,11 +7,19 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="cart.css">
-    <!-- Include the updated CSS styles here -->
+    <style>
+        /* Global styles to ensure Times New Roman font */
+        body {
+            font-family: 'Times New Roman', serif;
+        }
+
+        /* Additional font-specific styles */
+        .title h2 {
+            font-family: 'Dancing Script', cursive; /* Keeping the custom font for the title */
+        }
+    </style>
 </head>
 <body class="cart-page">
-    <p>After adding products to the cart, you can send these details to both yourself and the baker. Simply enter your name and send the details via WhatsApp, or provide both your name and email address in the fields below to send the details through email. After sending these details, you can discuss pricing and customization options directly with the owner through WhatsApp.</p>
-    
     <div class="header">
         <img src="logo.jpg" alt="Logo" class="logo">
         <div class="title">
@@ -30,9 +38,11 @@
         </div>
     </div>
     
+    <p>After adding products to the cart, you can send these details to both yourself and the baker. Simply enter your name and send the details via WhatsApp, or provide both your name and email address in the fields below to send the details through email. After sending these details, you can discuss pricing and customization options directly with the owner through WhatsApp.</p>
+    
     <div class="cart-content">
         <h2>Your Cart</h2>
-        <div id="cartItems"></div>
+        <div id="cartItems">Your cart is empty.</div>
         <form id="emailForm" class="email-form">
             <label for="customerName">Enter your name:</label>
             <input type="text" id="customerName" name="customerName" required>
