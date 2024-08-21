@@ -184,22 +184,6 @@ li {
     margin-right: 5px;
 }
 
-/* CSS for fade-in effect */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.fade-in {
-    opacity: 0;
-    animation: fadeIn 1s ease-in-out forwards;
-}
 
 /* Responsive Styles */
 @media only screen and (max-width: 768px) {
