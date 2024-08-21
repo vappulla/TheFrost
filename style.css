@@ -116,15 +116,7 @@ body {
     margin: 0 auto; /* Center the slides horizontally */
 }
 
-/* Fade effect */
-.fade {
-    animation: fade 1.5s ease-in-out;
-}
 
-@keyframes fade {
-    from { opacity: .4 }
-    to { opacity: 1 }
-}
 
 .mySlides img {
     width: 100%;
