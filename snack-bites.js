@@ -4,7 +4,7 @@ function updateFlavors() {
     const flavorsSelect = document.getElementById('flavors');
     const sizesSelect = document.getElementById('sizes');
 
-    // Clear previous options
+    // Clear previous 
     flavorsSelect.innerHTML = '<option value="">Select Flavor</option>';
     sizesSelect.innerHTML = '<option value="">Select Size</option>';
 
