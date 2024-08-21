@@ -125,15 +125,22 @@ function clearCartAndFields() {
 
 // Send cart details through WhatsApp
 // Send cart details through WhatsApp
+// Send cart details through WhatsApp
 function sendCartToWhatsApp() {
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const customerName = document.getElementById('customerName').value;
 
     if (cart.length === 0) {
         alert('Your cart is empty. Please add items to your cart before sending.');
         return;
     }
 
-    let cartDetails = 'Your Cart Details:\n';
+    if (!customerName) {
+        alert('Please enter your name before sending.');
+        return;
+    }
+
+    let cartDetails = `Customer Name: ${customerName}\n\nYour Cart Details:\n`;
     cart.forEach((item, index) => {
         let flavorDisplay = item.flavor || 'N/A';
 
@@ -153,6 +160,7 @@ function sendCartToWhatsApp() {
     clearCartAndFields(); // Clear cart and fields after sending
     window.open(whatsappUrl, '_blank'); // Open WhatsApp in a new tab
 }
+
 
 
 // Initialize EmailJS
