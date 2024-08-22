@@ -1,3 +1,4 @@
+
 function addRegularToCart() {
     const flavor = document.getElementById('regularFlavors').value;
     const size = document.getElementById('RegularSizes').value;
@@ -90,6 +91,7 @@ let slideIndexDessert =0;
 let slideIndexRegular =0;
 let slideIndexNakedCake =0;
 let slideIndexCheese=0;
+let slideIndexcelebration=0;
 function showSlides(slideshowClass, slideIndexVar) {
     const slides = document.querySelectorAll(`.${slideshowClass} .slide`);
     slides.forEach((slide, index) => {
@@ -108,7 +110,9 @@ document.addEventListener('DOMContentLoaded', () => {
     showSlides('Regular-slideshow',slideIndexRegular);
     showSlides('NakedCake-slideshow',slideIndexNakedCake);
     showSlides('Cheese-slideshow',slideIndexCheese);
+    showSlides('Celebration-slideshow',slideIndexcelebration);
     
+
 
 
 
@@ -131,8 +135,3 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', checkVisibility);
     checkVisibility(); // Initial check to handle cases where elements are already in view
 });
-
-
-
-
-
