@@ -1,6 +1,6 @@
 /* General Styles */
 body {
-     font-family: 'Times New Roman', serif;
+    font-family: 'Times New Roman', serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -13,20 +13,18 @@ header {
 }
 
 .nav a {
-  text-decoration: none;
-  color: black;
-  padding: 10px;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
 .nav a.active {
-  background-color: #f4a4a4;
-  color: white;
-  border: 2px solid #f4a4a4;
+    background-color: #f4a4a4;
+    color: white;
+    border: 2px solid #f4a4a4;
 }
-
-
 
 .content {
     padding-left: 150px;
@@ -50,11 +48,16 @@ header {
     border-radius: 8px;
     padding: 20px;
     margin: 10px auto;
-    background-color: #f9f9f9;
+    background-color: rgba(255, 255, 255, 0.9); /* More opaque background for better readability */
+    background-image: url('logo.jpg'); /* Background image URL */
+    background-size: cover; /* Cover the entire card */
+    background-position: center; /* Center the image */
+    background-blend-mode: overlay; /* Blend the background image with the color */
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
+
 
 .menu-card h4 {
     margin-top: 0;
@@ -88,7 +91,7 @@ header {
 
 .description {
     flex: 1;
-    font-family: 'Dancing Script', cursive;
+     font-family: 'Gabriola', serif;
     font-size: 20px;
     padding-left: 100px;
     border-left: 1px solid #ccc;
@@ -161,49 +164,9 @@ header {
     vertical-align: middle;
 }
 
-/* Slideshow Styles */
-.brownie-slideshow, .brownieAssorted-slideshow, .brownieSlab-slideshow, .brownieBento-slideshow, .Cookie-slideshow, .Cupcake-slideshow, .Muffin-slideshow {
-    position: relative;
-    max-width: 500px;
-    margin: 20px auto;
-    overflow: hidden;
-    height: 400px;
-}
-
-.brownie-slideshow .slide, .brownieAssorted-slideshow .slide, .brownieSlab-slideshow .slide, .brownieBento-slideshow .slide, .Cookie-slideshow .slide, .Cupcake-slideshow .slide, .Muffin-slideshow .slide {
-    position: relative;
-    width: 100%;
-    height: 100%;
-}
-
-.brownie-slideshow img, .brownieAssorted-slideshow img, .brownieSlab-slideshow img, .brownieBento-slideshow img, .Cookie-slideshow img, .Cupcake-slideshow img, .Muffin-slideshow img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
-}
-
-.brownie-slideshow:hover img, .brownieAssorted-slideshow:hover img, .brownieSlab-slideshow:hover img, .brownieBento-slideshow:hover img, .Cookie-slideshow:hover img, .Cupcake-slideshow:hover img, .Muffin-slideshow:hover img {
-    transform: scale(1.05);
-    opacity: 0.9;
-}
-
-.brownie-slideshow p, .brownieAssorted-slideshow p, .brownieSlab-slideshow p, .brownieBento-slideshow p, .Cookie-slideshow p, .Cupcake-slideshow p, .Muffin-slideshow p {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    font-weight: bold;
-    color: #333;
-    background: rgba(255, 255, 255, 0.7);
-    text-align: center;
-    box-sizing: border-box;
-}
 
 /* Celebration Cakes Slideshow Styles */
-.Theme-slideshow, .Dessert-slideshow, .Regular-slideshow, .NakedCake-slideshow, .Cheese-slideshow {
+.Theme-slideshow, .Dessert-slideshow, .Regular-slideshow, .NakedCake-slideshow, .Cheese-slideshow, .Celebration-slideshow {
     position: relative;
     max-width: 500px;
     margin: 20px auto;
@@ -211,13 +174,13 @@ header {
     height: 400px;
 }
 
-.Theme-slideshow .slide, .Dessert-slideshow .slide, .Regular-slideshow .slide, .NakedCake-slideshow .slide, .Cheese-slideshow .slide {
+.Theme-slideshow .slide, .Dessert-slideshow .slide, .Regular-slideshow .slide, .NakedCake-slideshow .slide, .Cheese-slideshow .slide, .Celebration-slideshow .slide {
     position: relative;
     width: 100%;
     height: 100%;
 }
 
-.Theme-slideshow img, .Dessert-slideshow img, .Regular-slideshow img, .NakedCake-slideshow img, .Cheese-slideshow img {
+.Theme-slideshow img, .Dessert-slideshow img, .Regular-slideshow img, .NakedCake-slideshow img, .Cheese-slideshow img, .Celebration-slideshow img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -225,12 +188,12 @@ header {
     transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
 }
 
-.Theme-slideshow:hover img, .Dessert-slideshow:hover img, .Regular-slideshow:hover img, .NakedCake-slideshow:hover img, .Cheese-slideshow:hover img {
+.Theme-slideshow:hover img, .Dessert-slideshow:hover img, .Regular-slideshow:hover img, .NakedCake-slideshow:hover img, .Cheese-slideshow:hover img, .Celebration-slideshow:hover img {
     transform: scale(1.05);
     opacity: 0.9;
 }
 
-.Theme-slideshow p, .Dessert-slideshow p, .Regular-slideshow p, .NakedCake-slideshow p, .Cheese-slideshow p {
+.Theme-slideshow p, .Dessert-slideshow p, .Regular-slideshow p, .NakedCake-slideshow p, .Cheese-slideshow p, .Celebration-slideshow p {
     position: absolute;
     top: 0;
     width: 100%;
@@ -242,8 +205,6 @@ header {
     text-align: center;
     box-sizing: border-box;
 }
-
-
 
 /* Responsive Styles */
 @media (max-width: 768px) {
@@ -264,8 +225,8 @@ header {
         max-width: none;
     }
 
-    .brownie-slideshow, .brownieAssorted-slideshow, .brownieSlab-slideshow, .brownieBento-slideshow, .Cookie-slideshow, .Cupcake-slideshow, .Muffin-slideshow,
-    .Theme-slideshow, .Dessert-slideshow, .Regular-slideshow, .NakedCake-slideshow, .Cheese-slideshow {
+    
+    .Theme-slideshow, .Dessert-slideshow, .Regular-slideshow, .NakedCake-slideshow, .Cheese-slideshow, .Celebration-slideshow {
         max-width: 100%;
     }
 }
