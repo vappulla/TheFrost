@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,12 +7,15 @@
     <title>The Frost</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="muffins.css">
+    
+
     <style>
-        /* Inline CSS to move subsections to the left and style the menu card */
         /* Base styles for all devices */
-         body {
-        font-family: 'Times New Roman', serif;
+        body {
+            font-family: 'Times New Roman', serif;
         }
+
         .content {
             padding: 20px;
             margin-top: 40px;
@@ -27,16 +31,32 @@
             padding-left: 20px;
         }
 
+        /* Common styles for all menu cards */
         .menu-card {
+            width: 90%;
+            max-width: 700px; /* Increased max-width for better desktop appearance */
             border: 1px solid #ddd;
             border-radius: 8px;
             padding: 20px;
-            margin-top: 10px;
-            background-color: #f9f9f9;
+            margin: 10px auto;
+            background-color: rgba(255, 255, 255, 0.9); /* More opaque background for better readability */
+            background-image: url('logo.jpg'); /* Background image URL */
+            background-size: cover; /* Cover the entire card */
+            background-position: center; /* Center the image */
+            background-blend-mode: overlay; /* Blend the background image with the color */
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .flavors {
+            display: flex; /* Aligns items side by side */
             justify-content: space-between;
-            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .flavors > div {
+            width: 48%; /* Ensure both lists fit side by side with space in between */
         }
 
         .menu-card h4 {
@@ -48,6 +68,7 @@
         .menu-card ul {
             list-style-type: none;
             padding-left: 0;
+            margin-top: 0;
         }
 
         .menu-card ul li {
@@ -55,25 +76,26 @@
         }
 
         .star {
-            color: gold;
-            margin-left: 5px;
+            color: #ffcc00;
         }
 
+        /* Styling the separator */
         .separator {
-            width: 1px;
+            width: 100%;  /* Full width for the separator */
             background-color: #ccc;
-            height: auto;
-            margin-left: 2in;
-            margin-right: 0;
+            height: 1px;  /* Thin separator */
+            margin: 20px 0;  /* Space around the separator */
         }
 
         .description {
-            flex: 1;
-            font-family: 'Dancing Script', cursive;
+            font-family: 'Gabriola', serif;
             font-size: 30px;
             padding-left: 20px;
             border-left: 1px solid #ccc;
-            padding-top: 100px;
+            padding-top: 20px;
+            margin: 20px auto; /* Center the description horizontally */
+            max-width: 800px; /* Restrict the width for better readability */
+            text-align: center; /* Center-align the text */
         }
 
         .description b,
@@ -102,45 +124,76 @@
             font-size: 16px;
         }
 
-        .brownie-slideshow, .brownieAssorted-slideshow, .brownieSlab-slideshow, .brownieBento-slideshow, .Cookie-slideshow, .Cupcake-slideshow, .Muffin-slideshow {
+        .brownie-slideshow,
+        .brownieAssorted-slideshow,
+        .brownieSlab-slideshow,
+        .brownieBento-slideshow,
+        .Cookie-slideshow,
+        .Cupcake-slideshow,
+        .Muffin-slideshow {
             position: relative;
-            max-width: 500px;
-            margin: 20px auto;
+            max-width: 600px; /* Further increased width */
+            margin: 20px auto; /* Center the slideshow */
             overflow: hidden;
-            height: 400px;
+            height: 450px; /* Further increased height */
         }
 
-        .brownie-slideshow .slide, .brownieAssorted-slideshow .slide, .brownieSlab-slideshow .slide, .brownieBento-slideshow .slide, .Cookie-slideshow .slide, .Cupcake-slideshow .slide, .Muffin-slideshow .slide {
+        .brownie-slideshow .slide,
+        .brownieAssorted-slideshow .slide,
+        .brownieSlab-slideshow .slide,
+        .brownieBento-slideshow .slide,
+        .Cookie-slideshow .slide,
+        .Cupcake-slideshow .slide,
+        .Muffin-slideshow .slide {
             position: relative;
             width: 100%;
             height: 100%;
         }
 
-        .brownie-slideshow img, .brownieAssorted-slideshow img, .brownieSlab-slideshow img, .brownieBento-slideshow img, .Cookie-slideshow img, .Cupcake-slideshow img, .Muffin-slideshow img {
+        .brownie-slideshow img,
+        .brownieAssorted-slideshow img,
+        .brownieSlab-slideshow img,
+        .brownieBento-slideshow img,
+        .Cookie-slideshow img,
+        .Cupcake-slideshow img,
+        .Muffin-slideshow img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: cover; /* Ensure images cover the container */
             display: block;
             transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
         }
 
-        .brownie-slideshow:hover img, .brownieAssorted-slideshow:hover img, .brownieSlab-slideshow:hover img, .brownieBento-slideshow:hover img, .Cookie-slideshow:hover img, .Cupcake-slideshow:hover img, .Muffin-slideshow:hover img {
-            transform: scale(1.05);
-            opacity: 0.9;
+        .brownie-slideshow:hover img,
+        .brownieAssorted-slideshow:hover img,
+        .brownieSlab-slideshow:hover img,
+        .brownieBento-slideshow:hover img,
+        .Cookie-slideshow:hover img,
+        .Cupcake-slideshow:hover img,
+        .Muffin-slideshow:hover img {
+            transform: scale(1.05); /* Slight zoom effect */
+            opacity: 0.9; /* Slightly transparent on hover */
         }
 
-        .brownie-slideshow p, .brownieAssorted-slideshow p, .brownieSlab-slideshow p, .brownieBento-slideshow p, .Cookie-slideshow p, .Cupcake-slideshow p, .Muffin-slideshow p {
+        .brownie-slideshow p,
+        .brownieAssorted-slideshow p,
+        .brownieSlab-slideshow p,
+        .brownieBento-slideshow p,
+        .Cookie-slideshow p,
+        .Cupcake-slideshow p,
+        .Muffin-slideshow p {
             position: absolute;
             top: 0;
             width: 100%;
-            padding: 10px;
-            font-size: 16px;
+            padding: 15px; /* Increased padding for larger slideshow */
+            font-size: 20px; /* Increased font size */
             font-weight: bold;
             color: #333;
             background: rgba(255, 255, 255, 0.7);
             text-align: center;
             box-sizing: border-box;
         }
+
 
         .nav a {
             text-decoration: none;
@@ -156,9 +209,10 @@
             border: 2px solid #f4a4a4;
         }
 
-   
-
-        #addToCartBtn, #addCupcakeToCartBtn, #addCookieToCartBtn, #addMuffinToCartBtn {
+        #addToCartBtn,
+        #addCupcakeToCartBtn,
+        #addCookieToCartBtn,
+        #addMuffinToCartBtn {
             margin-top: 20px;
             padding: 10px 20px;
             font-size: 16px;
@@ -171,11 +225,13 @@
             transition: background 0.3s ease, box-shadow 0.3s ease;
         }
 
-        #addToCartBtn, #addCupcakeToCartBtn:hover, #addCookieToCartBtn:hover, #addMuffinToCartBtn:hover {
+        #addToCartBtn:hover,
+        #addCupcakeToCartBtn:hover,
+        #addCookieToCartBtn:hover,
+        #addMuffinToCartBtn:hover {
             background: linear-gradient(45deg, #6a1b9a, #8e44ad);
             box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
         }
-
 
         /* Responsive design adjustments */
         @media (max-width: 768px) {
@@ -185,7 +241,6 @@
             }
 
             .menu-card {
-                flex-direction: column;
                 padding: 10px;
             }
 
@@ -193,10 +248,11 @@
                 font-size: 24px;
                 padding-left: 10px;
                 padding-top: 50px;
+                text-align: left; /* Align text to the left on mobile for better readability */
             }
 
             .separator {
-                margin-left: 1in;
+                margin: 20px 0; /* Ensure separator is properly spaced */
             }
 
             .nav a {
@@ -208,11 +264,23 @@
                 gap: 10px;
             }
 
-            .brownie-slideshow, .brownieAssorted-slideshow, .brownieSlab-slideshow, .brownieBento-slideshow, .Cookie-slideshow, .Cupcake-slideshow, .Muffin-slideshow {
-                max-width: 100%;
-                height: auto;
+            @media (max-width: 100px) {
+            .brownie-slideshow,
+            .brownieAssorted-slideshow,
+            .brownieSlab-slideshow,
+            .brownieBento-slideshow,
+            .Cookie-slideshow,
+            .Cupcake-slideshow,
+            .Muffin-slideshow {
+                max-width: 100%; /* Full width for mobile screens */
+                height: auto; /* Adjust height proportionally */
             }
+            
+
         }
+
+
+
 
     </style>
 </head>
@@ -255,75 +323,90 @@
                 </p>
 
                 <!-- Menu Card -->
-                <div class="menu-card">
-                    <div class="flavors">
-                        <h4 class="underline">Go-to Flavors</h4>
-                        <ul>
-                            <li>Classic Plain</li>
-                            <li>Chocolate Chip</li>
-                            <li>Chocolate Chunk</li>
-                            <li>Double Chocolate Chip <span class="star">&#9733;</span></li>
-                            <li>Triple Chocolate Chunk</li>
-                            <li>Blondies (White Chocolate)</li>
-                            
-                        </ul>
-                        <h4>Exotic Chunkies</h4>
-                        <ul>
-                            <li>Nutella Sandwich <span class="star">&#9733;</span></li>
-                            <li>Oreo crumble</li>
-                            <li>Kitkat fudge</li>
-                            <li>Chocolate walnut</li>
-                            <li>Chocolate Almond</li>
-                            <li>Hazlenut crunch <span class="star">&#9733;</span></li>
-                            <li>Lotus Biscoff crunch <span class="star">&#9733;</span></li>
-                            <li>Chocolate Espresso</li>
-                            <li>The cookie crumble</li>
-                            <li>Sea Salt <span class="star">&#9733;</span></li>
-                            <li>Caramel <span class="star">&#9733;</span></li>
-                            <li>Ferrero Rocher <span class="star">&#9733;</span></li>
-                        </ul>
+                    <div class="menu-card">
+                        <div class="flavors">
+                            <div class="flavors-list">
+                                <h4 class="underline">Go-to Flavors</h4>
+                                <ul>
+                                    <li>Belgian Classic Plain</li>
+                                    <li>Chocolate Chip</li>
+                                    <li>Chocolate Chunk</li>
+                                    <li>Double Chocolate Chip <span class="star">&#9733;</span></li>
+                                    <li>Triple Chocolate Chunk</li>
+                                    <li>Blondies (White Chocolate)</li>
+                                </ul>
+                            </div>
+                            <div class="flavors-list">
+                                <h4>Exotic Chunkies</h4>
+                                <ul>
+                                    <li>Nutella Sandwich <span class="star">&#9733;</span></li>
+                                    <li>Oreo crumble</li>
+                                    <li>Kitkat fudge</li>
+                                    <li>Chocolate walnut</li>
+                                    <li>Chocolate Almond</li>
+                                    <li>Hazlenut crunch <span class="star">&#9733;</span></li>
+                                    <li>Lotus Biscoff crunch <span class="star">&#9733;</span></li>
+                                    <li>Chocolate Espresso</li>
+                                    <li>The cookie crumble</li>
+                                    <li>Caramel Sea Salt <span class="star">&#9733;</span></li>
+                                    <li>Ferrero Rocher <span class="star">&#9733;</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="separator"></div>
+                        <div class="description">
+                            <p style="margin-bottom: 20px;">
+                                Bite-sized indulgence, crafted for the perfect chocolate experience. These brownie pieces come in a variety of flavors to satisfy every craving.
+                            </p>
+                            <p style="margin-bottom: 20px;">
+                                Choose from classic favorites or indulge in our exotic flavors. Perfect for parties, gatherings, or just a sweet treat for yourself.
+                            </p>
+                            <p><b>Available Sizes - Box of 4, 6, or 9 pieces</b></p>
+                            <p><strong>Customize your box with your favorite flavors. Bulk orders available for special occasions.</strong></p>
+                        </div>
                     </div>
-                    <div class="separator"></div>
-                    <div class="description">
-                        <p style="margin-bottom: 20px;">
-                            Bite-sized indulgence, crafted for the perfect chocolate experience. These brownie pieces come in a variety of flavors to satisfy every craving.
-                        </p>
-                        <p style="margin-bottom: 20px;">
-                            Choose from classic favorites or indulge in our exotic flavors. Perfect for parties, gatherings, or just a sweet treat for yourself.
-                        </p>
-                        <p><b>Available Sizes - Box of 4, 6, or 9 pieces</b></p>
-                        <p><strong>Customize your box with your favorite flavors. Bulk orders available for special occasions.</strong></p>
+                </div>
+                <div class="brownie-slideshow">
+                    <div class="slide">
+                        <img src="IMG_0081.jpg" alt="Oreo crumble Brownie">
+                        <p>Oreo crumble Brownie</p>
                     </div>
+                    <div class="slide">
+                        <img src="IMG_0082.jpg" alt="Nutella Sandwich Brownie">
+                        <p>Nutella Sandwich Brownie</p>
+                    </div>
+                    <div class="slide">
+                        <img src="IMG_0077.jpg" alt="Double chocolate chip Brownie">
+                        <p>Double chocolate chip Brownie</p>
+                    </div>
+                    <div class="slide">
+                        <img src="IMG_0076.jpg" alt="Chocolate chip Brownie">
+                        <p>Chocolate chip</p>
+                    </div>
+                    <div class="slide">
+                        <img src="IMG_0075.jpg" alt="Chocolate chip Brownie">
+                        <p>Chocolate chip Brownie</p>
+                    </div>
+                    <div class="slide">
+                        <img src="8aa8e9c4-5978-4c5b-8997-6cb7644ed0d1.JPG" alt="Assorted Brownies">
+                        <p>Assorted Brownies</p>
+                    </div>
+                    <div class="slide">
+                        <img src="2c598e87-d003-4f6a-8871-87d619c40ef5.JPG" alt="Chocolate Chunk Brownie">
+                        <p>Chocolate Chunk Brownie</p>
+                    </div>
+                    <div class="slide">
+                        <img src="edaa8c80-54cf-4069-9d9a-2d9be8566f78.JPG" alt="Assorted Brownies">
+                        <p>Assorted Brownies</p>
+                    </div>
+                    <div class="slide">
+                        <img src="6659fbcd-d47e-47c8-afa5-2573c18a1d36.JPG" alt="Cookie crumble brownie">
+                        <p>Cookie crumble brownie</p>
+                    </div>
+                  
+                    <!-- Add more slides as needed -->
                 </div>
-            </div>
-            <div class="brownie-slideshow">
-                
-                <div class="slide">
-                    <img src="IMG_0081.jpg" alt="Oreo crumble Brownie">
-                    <p>Oreo crumble Brownie</p>
-                </div>
-                <div class="slide">
-                    <img src="IMG_0082.jpg" alt="Nutella Sandwich Brownie">
-                    <p>Nutella Sandwich Brownie</p>
-                </div>
-                
-                <div class="slide">
-                    <img src="IMG_0077.jpg" alt="Double chocolate chip Brownie">
-                    <p>Double chocolate chip Brownie</p>
-                </div>
-                <div class="slide">
-                    <img src="IMG_0076.jpg" alt="Chocolate chip Brownie">
-                    <p>Chocolate chip</p>
-                </div>
-                <div class="slide">
-                    <img src="IMG_0075.jpg" alt="Chocolate chip Brownie">
-                    <p>Chocolate chip Brownie</p>
-                </div>
-                
-                <!-- Add more slides as needed -->
-            </div>
 
-            <div class="subsection">
                 <h3>Whole Brownie Slabs</h3>
                 <p>
                     Enjoy a whole slab of our rich, fudgy brownies, ideal for gatherings and parties.
@@ -332,91 +415,26 @@
                 <!-- Menu Card for Whole Brownie Slabs -->
                 <div class="menu-card">
                     <div class="flavors">
-                        <h4 class="underline">Go-to Flavors</h4>
-                        <ul>
-                            <li>Classic Plain</li>
-                            <li>Chocolate Chip</li>
-                            <li>Double Chocolate Chip<span class="star">&#9733;</span></li>
-                            <li>Blondies (White Chocolate)</li>
-                        </ul>
-                        <h4>Exotic Chunkies</h4>
-                        <ul>
-                            <li>Nutella Sandwich<span class="star">&#9733;</span></li>
-                            <li>Oreo crumble</li>
-                            <li>Kitkat fudge</li>
-                            <li>Chocolate walnut</li>
-                            <li>Chocolate Almond</li>
-                            <li>Hazlenut crunch<span class="star">&#9733;</span></li>
-                            <li>Lotus Biscoff crunch<span class="star">&#9733;</span></li>
-                        </ul>
-                    </div>
-                    <div class="separator"></div>
-                    <div class="description">
-                        <p style="margin-bottom: 20px;">
-                            The whole brownies are perfect for our special person.
-                        </p>
-                        <p style="margin-bottom: 20px;">
-                            Now celebrate your birthdays, anniversaries, and milestones with our "Whole Brownies" available in all the go-to and exotic flavors topped with your favorite chocolates, toppings, and fudge.
-                        </p>
-                        
-                    </div>
-                </div>
-            </div>
-               <!-- Borwnie Slab Slide Show -->
-            <div class="brownieSlab-slideshow">
-                <div class="slide">
-                    <img src="IMG_0060.jpg" alt="Nutella Sandwich Brownie Slab">
-                    <p>Nutella Sandwich Brownie Slab</p>
-                </div>
-                <div class="slide">
-                    <img src="IMG_0095.jpg" alt="Double chocolate chip slab with dark chocolate rosette, milk chocolate mini bars and dark chocolate callets">
-                    <p>Double chocolate chip slab with dark chocolate rosette, milk chocolate mini bars and dark chocolate callets</p>
-                </div>
-                <div class="slide">
-                    <img src="IMG_0083.jpg" alt="Brownie slab topped with nutella, dark chocolate rossette and white chocolate">
-                    <p>Brownie slab topped with nutella, dark chocolate rossette and white chocolate</p>
-                </div>
-                <div class="slide">
-                    <img src="IMG_0097.jpg" alt="Chocolate chip slab with dark chocolate rosette, milk chocolate mini bars, hazlenut and dark chocolate callets">
-                    <p>Chocolate chip slab with dark chocolate rosette, milk chocolate mini bars, hazlenut and dark chocolate callets</p>
-                </div>
-               
-            </div>
-
-            <div class="subsection">
-                <h3>Assorted Brownie</h3>
-                <p>
-                    Indulge in a delightful selection of our handcrafted brownies with the Assorted Brownie Box. Perfect for satisfying your cravings or gifting to someone special, this box allows you to mix and match from a variety of decadent flavors. 
-                </p>
-
-                <!-- Menu Card for Whole Brownie Assorted -->
-                <div class="menu-card">
-                    <div class="flavors">
-                        <h4 class="underline">Go-to Flavors</h4>
-                        <ul>
-                            <li>Classic Plain</li>
-                            <li>Chocolate Chip</li>
-                            <li>Chocolate Chunk</li>
-                            <li>Double Chocolate Chip <span class="star">&#9733;</span></li>
-                            <li>Triple Chocolate Chunk</li>
-                           
-
-                        </ul>
-                        <h4>Exotic Chunkies</h4>
-                        <ul>
-                            <li>Nutella Sandwich <span class="star">&#9733;</span></li>
-                            <li>Oreo crumble</li>
-                            <li>Kitkat fudge</li>
-                            <li>Chocolate walnut</li>
-                            <li>Chocolate Almond</li>
-                            <li>Hazlenut crunch <span class="star">&#9733;</span></li>
-                            <li>Lotus Biscoff crunch <span class="star">&#9733;</span></li>
-                            <li>Chocolate Espresso</li>
-                            <li>The cookie crumble</li>
-                            <li>Sea Salt <span class="star">&#9733;</span></li>
-                            <li>Caramel <span class="star">&#9733;</span></li>
-                            <li>Ferrero Rocher <span class="star">&#9733;</span></li>
-                        </ul>
+                        <div class="flavors-list">
+                            <h4 class="underline">Go-to Flavors</h4>
+                            <ul>
+                                <li>Classic Plain</li>
+                                <li>Chocolate Chip</li>
+                                <li>Double Chocolate Chip<span class="star">&#9733;</span></li>
+                                <li>Blondies (White Chocolate)</li>
+                            </ul>
+                        </div>
+                        <div class="flavors-list">
+                            <h4>Exotic Chunkies</h4>
+                            <ul>
+                                <li>Nutella Sandwich<span class="star">&#9733;</span></li>
+                                <li>Oreo crumble</li>
+                                <li>Kitkat fudge</li>
+                                <li>Chocolate walnut</li>
+                                <li>Chocolate Almond</li>
+                                <li>Hazlenut crunch<span class="star">&#9733;</span></li>
+                                <li>Lotus Biscoff crunch<span class="star">&#9733;</span></li>
+                            </ul>
                     </div>
                     <div class="separator"></div>
                     <div class="description">
@@ -442,6 +460,10 @@
                     <img src="IMG_0074.jpg" alt=" Assorted Brownie (Chocolate chip, Lotus Biscoff)">
                     <p>Assorted Brownie (Chocolate chip, Lotus Biscoff)</p>
                 </div>
+                <div class="slide">
+                    <img src="f9e50cd5-1a1c-4ec1-8707-f4cb79708478.JPG" alt="Almond Chocolate Brownie">
+                    <p>Almond Chocolate Brownie</p>
+                </div>
             </div>
             
             <div class="subsection">
@@ -453,31 +475,33 @@
                 <!-- Menu Card -->
                 <div class="menu-card">
                     <div class="flavors">
-                        <h4 class="underline">Go-to Flavors</h4>
-                        <ul>
-                            <li>Classic Plain</li>
-                            <li>Chocolate Chip</li>
-                            <li>Chocolate Chunk</li>
-                            <li>Double Chocolate Chip <span class="star">&#9733;</span></li>
-                            <li>Triple Chocolate Chunk</li>
-                            <li>Blondies (White Chocolate)</li>
-
-                        </ul>
-                        <h4>Exotic Chunkies</h4>
-                        <ul>
-                            <li>Nutella Sandwich <span class="star">&#9733;</span></li>
-                            <li>Oreo crumble</li>
-                            <li>Kitkat fudge</li>
-                            <li>Chocolate walnut</li>
-                            <li>Chocolate Almond</li>
-                            <li>Hazlenut crunch <span class="star">&#9733;</span></li>
-                            <li>Lotus Biscoff crunch <span class="star">&#9733;</span></li>
-                            <li>Chocolate Espresso</li>
-                            <li>The cookie crumble</li>
-                            <li>Sea Salt <span class="star">&#9733;</span></li>
-                            <li>Caramel <span class="star">&#9733;</span></li>
-                            <li>Ferrero Rocher <span class="star">&#9733;</span></li>
-                        </ul>
+                        <div class="flavors-list">
+                            <h4 class="underline">Go-to Flavors</h4>
+                            <ul>
+                                <li>Classic Plain</li>
+                                <li>Chocolate Chip</li>
+                                <li>Chocolate Chunk</li>
+                                <li>Double Chocolate Chip <span class="star">&#9733;</span></li>
+                                <li>Triple Chocolate Chunk</li>
+                                <li>Blondies (White Chocolate)</li>
+                            </ul>
+                        </div>
+                        <div class="flavors-list">
+                            <h4>Exotic Chunkies</h4>
+                            <ul>
+                                <li>Nutella Sandwich <span class="star">&#9733;</span></li>
+                                <li>Oreo crumble</li>
+                                <li>Kitkat fudge</li>
+                                <li>Chocolate walnut</li>
+                                <li>Chocolate Almond</li>
+                                <li>Hazlenut crunch <span class="star">&#9733;</span></li>
+                                <li>Lotus Biscoff crunch <span class="star">&#9733;</span></li>
+                                <li>Chocolate Espresso</li>
+                                <li>The cookie crumble</li>
+                                <li>Sea Salt <span class="star">&#9733;</span></li>
+                                <li>Caramel <span class="star">&#9733;</span></li>
+                                <li>Ferrero Rocher <span class="star">&#9733;</span></li>
+                            </ul>
                     </div>
                     <div class="separator"></div>
                     <div class="description">
@@ -489,7 +513,7 @@
 
                     </div>
                 </div>
-        
+                </div>
 
                 <!-- Borwnie Bento Slide Show -->
                 <div class="brownieBento-slideshow">
@@ -533,33 +557,45 @@
 
       
 
-          <!-- Cookies Section -->
-          <div class="section">
-              <h2>Cookies</h2>
-              <p>
-                  Our cookies are baked to perfection, offering a crispy exterior and a soft, chewy center. Available in various flavors to satisfy any craving.
-              </p>
+            <!-- Cookies Section -->
+            <div class="section">
+                <h2>Cookies</h2>
+                <p>
+                    Our cookies are baked to perfection, offering a crispy exterior and a soft, chewy center. Available in various flavors to satisfy any craving.
+                </p>
 
-              <!-- Menu Card for Cookies -->
-              <div class="menu-card">
-                  <div class="flavors">
-                      <h4 class="underline">Go-to Flavors</h4>
-                      <ul>
-                          <li>Chocolate chip</li>
-                          <li>Double Chocolate chip</li>
-                          <li>Triple Chocolate chip</li>
-                          <li>Classic Chocolate chunk</li>
-                          <li>Double Chocolate chunk</li>
-                      </ul>
-                      <h4>Exotic Flavors</h4>
-                      <ul>
-                          <li>Red Velvet white chocolate</li>
-                          <li>Nutella Tufed cookies</li>
-                      </ul>
-                      <h4>Assorted Flavors</h4>
-                      <ul>
-                          <li>Mix of Go-to and Exotic flavors</li>
-                      </ul>
+                <!-- Menu Card for Cookies -->
+                <div class="menu-card">
+                    <div class="flavors">
+                        <!-- Go-to Flavors -->
+                        <div class="flavors-list">
+                            <h4 class="underline">Go-to Flavors</h4>
+                            <ul>
+                                <li>Classic Chocolate chip</li>
+                                <li>Double Chocolate chip</li>
+                                <li>Triple Chocolate chip</li>
+                                <li>Classic Chocolate chunk</li>
+                                <li>Double Chocolate chunk</li>
+                            </ul>
+                        </div>
+
+                        <!-- Exotic Flavors -->
+                        <div class="flavors-list">
+                            <h4>Exotic Flavors</h4>
+                            <ul>
+                                <li>Oreo Crumble white chocolate</li>
+                                <li>Red Velvet white chocolate</li>
+                                <li>Nutella stuffed cookies</li>
+                                <li>Lotus Biscoff Melt</li>
+                            </ul>
+                        </div>
+
+                        <!-- Assorted Flavors -->
+                        <div class="flavors-list">
+                            <h4>Assorted Flavors</h4>
+                            <ul>
+                                <li>Mix of Go-to and Exotic flavors</li>
+                            </ul>
                   </div>
                   <div class="separator"></div>
                   <div class="description">
@@ -569,6 +605,7 @@
                       <p><b>Available in Bite Size (200 grams), Regular (Box of 4) & (Box of 6). An assorted box of cookies is also available. When selecting the assorted option, you can choose multiple flavors by holding down the Ctrl key while clicking.</b></p>
                   </div>
               </div>
+                </div>
               <!-- Cookie Slide Show -->
                 <div class="Cookie-slideshow">
                     <div class="slide">
@@ -583,6 +620,10 @@
                         <img src="IMG_0079.jpg" alt="Wheat double chocolate chip cookies">
                         <p>Wheat double chocolate chip cookies</p>
                     </div>
+                    <div class="slide">
+                        <img src="102b6505-e767-4a54-bb28-c489a13be487.JPG" alt="Double Chocolate Chip Cookies">
+                        <p>Double Chocolate Chip Cookies</p>
+                    </div>
                 </div>
 
               <!-- Dropdown Menus for Cookies -->
@@ -592,15 +633,17 @@
                       <select id="cookieFlavors" onchange="updateCookieFlavors()">
                           <option value="">Select Flavor</option>
                           <optgroup label="Go-to Flavors">
-                              <option value="Chocolate Chip">Chocolate Chip</option>
+                              <option value="Classic Chocolate Chip">Classic Chocolate Chip</option>
                               <option value="Double Chocolate Chip">Double Chocolate Chip</option>
                               <option value="Triple Chocolate Chip">Triple Chocolate Chip</option>
                               <option value="Classic Chocolate Chunk">Classic Chocolate Chunk</option>
                               <option value="Double Chocolate Chunk">Double Chocolate Chunk</option>
                           </optgroup>
                           <optgroup label="Exotic Flavors">
+                              <option value="Oreo Crumble White Chocolate">Oreo Crumble White Chocolate</option>
                               <option value="Red Velvet White Chocolate">Red Velvet White Chocolate</option>
                               <option value="Nutella Stuffed Cookies">Nutella Stuffed Cookies</option>
+                                 <option value="Lotus Biscoff Melt">Lotus Biscoff Melt</option>
                           </optgroup>
                           <optgroup label="Assorted Flavors">
                               <option value="AssortedCookies">Assorted Cookies</option>
@@ -646,41 +689,54 @@
                       </select>
                   </div>
               </div>
+                </div>
 
 
 
+                    <!-- Cupcakes Section -->
+                    <div class="section">
+                        <h2>Cupcakes</h2>
+                        <p>
+                            Delightful cupcakes in a variety of flavors and designs, perfect for any occasion. Each bite is a burst of flavor and joy.
+                        </p>
 
-        <!-- Cupcakes Section -->
-        <div class="section">
-            <h2>Cupcakes</h2>
-            <p>
-                Delightful cupcakes in a variety of flavors and designs, perfect for any occasion. Each bite is a burst of flavor and joy.
-            </p>
+                        <!-- Menu Card for Cupcakes -->
+                        <div class="menu-card">
+                            <div class="flavors">
+                                <!-- Go-to Flavors -->
+                                <div class="flavors-list">
+                                    <h4 class="underline">Go-to Flavors</h4>
+                                    <ul>
+                                        <li>Classic Vanilla</li>
+                                        <li>Vanilla Chocolate Chip</li>
+                                        <li>Chocolate Truffle <span class="star">&#9733;</span></li>
+                                        <li>Butter Scotch Caramel</li>
+                                        <li>Vanilla White Chocolate</li>
+                                    </ul>
+                                </div>
 
-            <!-- Menu Card for Cupcakes -->
-            <div class="menu-card">
-                <div class="flavors">
-                    <h4 class="underline">Go-to Flavors</h4>
-                    <ul>
-                        <li>Classic Vanilla</li>
-                        <li>Vanilla Chocolate Chip</li>
-                        <li>Chocolate Truffle<span class="star">&#9733;</span></li>
-                        <li>Butter Scotch Caramel</li>
-                        <li>Vanilla White Chocolate</li>
-                    </ul>
-                    <h4>Exotic Flavors</h4>
-                    <ul>
-                        <li>Espresso Chocolate</li>
-                        <li>Nutella Scoop<span class="star">&#9733;</span></li>
-                        <li>Hazlenut Magic</li>
-                        <li>Chocolate Ferrero Rocher<span class="star">&#9733;</span></li>
-                        <li>Oreo Crunch</li>
-                        <li>Red Velvet Cream</li>
-                        <li>Rose Milk Pistachio<span class="star">&#9733;</span></li>
-                        <li>Lotus Biscoff</li>
-                        <li>Mango Delight (Seasonal)</li>
-                    </ul>
-                    <h4>Assorted</h4>
+                                <!-- Exotic Flavors -->
+                                <div class="flavors-list">
+                                    <h4>Exotic Flavors</h4>
+                                    <ul>
+                                        <li>Espresso Chocolate</li>
+                                        <li>Nutella Scoop <span class="star">&#9733;</span></li>
+                                        <li>Hazlenut Magic</li>
+                                        <li>Chocolate Ferrero Rocher <span class="star">&#9733;</span></li>
+                                        <li>Oreo Crunch</li>
+                                        <li>Red Velvet Cream</li>
+                                        <li>Rose Milk Pistachio <span class="star">&#9733;</span></li>
+                                        <li>Lotus Biscoff</li>
+                                        <li>Mango Delight (Seasonal)</li>
+                                    </ul>
+                                </div>
+
+                                <!-- Assorted Flavors -->
+                                <div class="flavors-list">
+                                    <h4>Assorted</h4>
+                                    <ul>
+                                        <!-- Assorted items can be added here -->
+                                    </ul>
                 </div>
                 <div class="separator"></div>
                 <div class="description">
@@ -690,7 +746,7 @@
                     <p><b>Available in Bite Size (Box of 4), Regular (Box of 4) & (Box of 6). An assorted box of cookies is also available. When selecting the assorted option, you can choose multiple flavors by holding down the Ctrl key while clicking.</b></p>
                 </div>
             </div>
-
+                        </div>
             <!-- Cupcake Slide Show -->
             <div class="Cupcake-slideshow">
                 <div class="slide">
@@ -724,6 +780,10 @@
                 <div class="slide">
                     <img src="IMG_0100.jpg" alt="Dark chocolate cupcakes">
                     <p>Dark chocolate cupcakes</p>
+                </div>
+                <div class="slide">
+                    <img src="9db5b90b-967d-45ac-85b2-fe1e7e0e0d09.JPG" alt="Red Velvet cream cheese cupcakes">
+                    <p>Red Velvet cream cheese cupcakes</p>
                 </div>
             </div>
 
@@ -798,81 +858,79 @@
 
 
         <!-- Muffins Section -->
-        <div class="section">
+        <div class="muffins-section">
             <h2>Muffins</h2>
             <p>
                 Our muffins are moist, fluffy, and packed with delicious ingredients. A perfect snack for any time of the day.
             </p>
 
             <!-- Menu Card for Muffins -->
-            <div class="menu-card">
-                <div class="flavors">
+            <div class="muffins-menu-card">
+                <div class="muffins-flavors">
+                    <!-- Go-to Flavors Heading -->
                     <h4 class="underline">Go-to Flavors</h4>
+
+                    <!-- Go-to Flavors List -->
                     <ul>
-                        <li>Vanilla Chocolate Chip<span class="star">&#9733;</span></li>
+                        <li>Vanilla Chocolate Chip <span class="muffins-star">&#9733;</span></li>
                         <li>Vanilla White Chocolate Chip</li>
                         <li>Espresso Chocolate</li>
-                        <li>Death by chocolate<span class="star">&#9733;</span></li>
+                        <li>Death by Chocolate <span class="muffins-star">&#9733;</span></li>
                         <li>Chocolate Almond</li>
                         <li>Chocolate Walnut</li>
-                        <li>Banana Oats<span class="star">&#9733;</span></li>
+                        <li>Banana Oats <span class="muffins-star">&#9733;</span></li>
                     </ul>
-                   
                 </div>
-                <div class="separator"></div>
-                <div class="description">
+                <div class="muffins-separator"></div>
+                <div class="muffins-description">
                     <p style="margin-bottom: 20px;">
                         Our muffins offer a delightful mix of classic and unique flavors, perfect for any occasion. Enjoy a burst of flavor in every bite.
                     </p>
                     <p><b>Available in Regular (Box of 4) & (Box of 6).</b></p>
                 </div>
             </div>
+
+            <!-- Muffin Slideshow -->
+            <div class="muffin-slideshow">
+                <div class="slide">
+                    <img src="IMG_0093.jpg" alt="Almond Muffins">
+                    <p>Almond Muffins</p>
+                </div>
+            </div>
+
+            <!-- Dropdown Menus for Muffins -->
+            <div class="muffins-dropdown">
+                <div class="group">
+                    <label for="muffinFlavors">Flavors</label>
+                    <select id="muffinFlavors">
+                        <option value="">Select Flavor</option>
+                        <optgroup label="Go-to Flavors">
+                            <option value="Vanilla Chocolate Chip">Vanilla Chocolate Chip<span class="muffins-star">&#9733;</span></option>
+                            <option value="Vanilla White Chocolate Chip">Vanilla White Chocolate Chip</option>
+                            <option value="Espresso Chocolate">Espresso Chocolate</option>
+                            <option value="Death By Chocolate">Death By Chocolate<span class="muffins-star">&#9733;</span></option>
+                            <option value="Chocolate Almond">Chocolate Almond</option>
+                            <option value="Chocolate Walnut">Chocolate Walnut</option>
+                            <option value="Banana Oats">Banana Oats<span class="muffins-star">&#9733;</span></option>
+                        </optgroup>
+                    </select>
+                </div>
+                <div class="group">
+                    <label for="muffinSizes">Sizes</label>
+                    <select id="muffinSizes">
+                        <option value="">Select Size</option>
+                        <optgroup label="Regular">
+                            <option value="box4">Box of 4</option>
+                            <option value="box6">Box of 6</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <div class="group">
+                    <button id="addMuffinToCartBtn" onclick="addMuffinToCart()">Add to Cart</button>
+                </div>
+            </div>
         </div>
 
-        <!-- Muffin Slide Show -->
-        <div class="Muffin-slideshow">
-            <div class="slide">
-                <img src="IMG_0093.jpg" alt="Almond Muffins">
-                <p>Almond Muffins</p>
-            </div>
-           
-        </div>
-    <!-- Dropdown Menus for Muffins -->
-        <div class="dropdown">
-            <div class="group">
-                <label for="muffinFlavors">Flavors</label>
-                <select id="muffinFlavors">
-                    <option value="">Select Flavor</option>
-                    <optgroup label="Go-to Flavors">
-                        <option value="Vanilla Chocolate Chip">Vanilla Chocolate Chip<span class="star">&#9733;</span></option>
-                        <option value="Vanilla White ChocolateChip">Vanilla White Chocolate Chip</option>
-                        <option value="Espresso Chocolate">Espresso Chocolate</option>
-                        <option value="Death By Chocolate">Death By Chocolate<span class="star">&#9733;</span></option>
-                        <option value="Chocolate Almond">Chocolate Almond</option>
-                        <option value="Chocolate Walnut">Chocolate Walnut</option>
-                        <option value="Banana Oats">Banana Oats<span class="star">&#9733;</span></option>
-                    </optgroup>
-                   
-
-
-                </select>
-            </div>
-            <div class="group">
-                <label for="muffinSizes">Sizes</label>
-                <select id="muffinSizes">
-                    <option value="">Select Size</option>
-                    
-                    <optgroup label="Regular">
-                        <option value="box4">Box of 4</option>
-                        <option value="box6">Box of 6</option>
-                    </optgroup>
-                </select>
-            </div>
-            <div class="group">
-                <button id="addMuffinToCartBtn" onclick="addMuffinToCart()">Add to Cart</button>
-            </div>
-        </div>
-    </div>
     <!-- Footer -->
     <div class="footer">
         <div class="contact-left">
