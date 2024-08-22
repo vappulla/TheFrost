@@ -69,6 +69,7 @@ function sendCartToEmail() {
     const emailRecipients = [
         customerEmail,
         "magesh_mag@yahoo.com",
+          "thefrostin23@gmail.com",
         // Add more emails as needed
     ];
 
