@@ -1,3 +1,4 @@
+
 let slideIndex = 0;
 
 function showSlides() {
@@ -39,11 +40,3 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
-
-
-
-
-
-
-
-
