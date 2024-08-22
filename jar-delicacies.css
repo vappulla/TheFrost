@@ -1,3 +1,4 @@
+
 /* Inline CSS to move subsections to the left and style the menu card */
 .content {
     padding: 20px;
@@ -18,14 +19,20 @@
 }
 
 .menu-card {
+    width: 90%;
+    max-width: 700px; /* Increased max-width for better desktop appearance */
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 20px;
-    margin-top: 10px;
-    background-color: #f9f9f9;
+    margin: 10px auto;
+    background-color: rgba(255, 255, 255, 0.9); /* More opaque background for better readability */
+    background-image: url('logo.jpg'); /* Background image URL */
+    background-size: cover; /* Cover the entire card */
+    background-position: center; /* Center the image */
+    background-blend-mode: overlay; /* Blend the background image with the color */
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .menu-card h4 {
@@ -58,7 +65,7 @@
 
 .description {
     flex: 1;
-    font-family: 'Dancing Script', cursive;
+     font-family: 'Gabriola', serif;
     font-size: 20px; /* Increase the font size */
     padding-left: 20px; /* Move the description to the right */
     border-left: 1px solid #ccc; /* Make the left border narrower */
@@ -203,7 +210,3 @@
     color: white; /* Text color for the active link */
     border: 2px solid #f4a4a4; /* Border color and width for the active link */
 }
-
-
-
-
