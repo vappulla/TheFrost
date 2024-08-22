@@ -1,8 +1,9 @@
+
 /* Global styles */
 body {
     margin: 0;
     font-family: 'Times New Roman', serif;
-    background: linear-gradient(to bottom, #ffb6c1, #ff69b4); /* Gradient background */
+    background: linear-gradient(to bottom, #fdd3d9, #f3bed9); /* Gradient background */
 }
 
 /* Header styles */
