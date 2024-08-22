@@ -1,3 +1,4 @@
+
 function addDreamTinToCart() {
     const flavor = document.getElementById('DreamTinFlavors').value;
     const size = document.getElementById('DreamTinSizes').value;
@@ -96,7 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
     showSlides('TresLech-slideshow', slideIndexTresLech);
     showSlides('DreamTin-slideshow', slideIndexDreamTin);
     showSlides('ClassicTub-slideshow', slideIndexClassicTub);
-    
+
 });
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -127,8 +128,3 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(section);
     });
 });
-
-
-
-
-
