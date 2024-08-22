@@ -1,3 +1,4 @@
+
 // Function to update flavors and sizes based on selected brownie type
 function updateFlavors() {
     const type = document.getElementById('brownieType').value;
@@ -19,7 +20,7 @@ function updateFlavors() {
     if (type === 'Brownie pieces') {
         flavorsSelect.innerHTML += `
             <optgroup label="Go-To Flavors">
-                <option value="Classic Plain">Classic Plain</option>
+                <option value="Belgian Classic Plain">Classic Plain</option>
                 <option value="Chocolate Chip">Chocolate Chip</option>
                 <option value="Chocolate Chunk">Chocolate Chunk</option>
                 <option value="Double Chocolate Chip">Double Chocolate Chip &#9733;</option>
@@ -36,8 +37,7 @@ function updateFlavors() {
                 <option value="Lotus Biscoff Crunch">Lotus Biscoff Crunch &#9733;</option>
                 <option value="Chocolate Espresso">Chocolate Espresso</option>
                 <option value="Cookie Crumble">The Cookie Crumble</option>
-                <option value="Sea Salt">Sea Salt &#9733;</option>
-                <option value="Caramel">Caramel &#9733;</option>
+                <option value="Caramel Sea Salt">Caramel &#9733;</option>
                 <option value="Ferrero Rocher">Ferrero Rocher &#9733;</option>
             </optgroup>
         `;
@@ -328,9 +328,9 @@ document.addEventListener('DOMContentLoaded', () => {
     showSlides('Cookie-slideshow', slideIndexCookie);
     showSlides('Cupcake-slideshow', slideIndexCupcake);
      showSlides('Muffin-slideshow', slideIndexMuffin);
- 
-    
-   
+
+
+
 });
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -378,8 +378,3 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(section);
     });
 });
-
-
-
-
-
