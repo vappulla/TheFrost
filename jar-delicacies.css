@@ -18,16 +18,16 @@
     padding-left: 20px;
 }
 
-/* Menu card styling */
+/* Menu Card Styling */
 .menu-card {
     width: 90%;
-    max-width: 700px; /* Max width for desktop */
+    max-width: 700px;
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 20px;
     margin: 10px auto;
     background-color: rgba(255, 255, 255, 0.9); /* More opaque background for readability */
-    background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url('jar-delicacies-background.jpg'); /* Background image for jar delicacies */
+    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('jar-delicacies-background.jpg'); /* Background image for jar delicacies */
     background-size: cover; /* Cover the entire card */
     background-position: center; /* Center the image */
     background-blend-mode: overlay; /* Blend the image with the background color */
@@ -36,12 +36,11 @@
     align-items: flex-start;
 }
 
-
-
 .menu-card h4 {
     margin-top: 0;
     font-size: 18px;
     font-weight: bold;
+    color: #333; /* Ensure text color contrasts well with the background */
 }
 
 .menu-card ul {
@@ -53,6 +52,24 @@
 
 .menu-card ul li {
     padding: 5px 0;
+    color: #333; /* Ensure list item text color contrasts well with the background */
+}
+
+/* Responsive Styles for Mobile */
+@media (max-width: 768px) {
+    .menu-card {
+        width: 95%; /* Adjust width for better fit on small screens */
+        background-color: rgba(255, 255, 255, 0.9); /* Ensure good readability on mobile */
+        background-image: none; /* Remove background image for better readability on small screens */
+    }
+
+    .menu-card h4 {
+        color: #333; /* Maintain good contrast on mobile */
+    }
+
+    .menu-card ul li {
+        color: #333; /* Maintain good contrast on mobile */
+    }
 }
 
 .star {
