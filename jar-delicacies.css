@@ -218,3 +218,33 @@
     color: white; /* Text color for the active link */
     border: 2px solid #f4a4a4; /* Border color and width for the active link */
 }
+@media (max-width: 768px) {
+    .content {
+        padding-left: 20px;
+    }
+
+    .section, .subsection {
+        padding-left: 0;
+    }
+
+    .description {
+        padding-left: 20px;
+    }
+
+    .menu-card {
+        background-color: rgba(0, 0, 0, 0.7); /* Darker background for better readability */
+       
+        background-size: cover; /* Ensure the image covers the card */
+        background-position: center; /* Center the image */
+        background-blend-mode: overlay; /* Blend the background with the overlay */
+        color: #fff; /* White text color for contrast */
+    }
+
+    .menu-card h4 {
+        color: #fff; /* Ensure heading text is visible */
+    }
+
+    .menu-card ul li {
+        color: #ddd; /* Lighter text color for list items */
+    }
+}
