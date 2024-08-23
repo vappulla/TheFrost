@@ -236,21 +236,45 @@ header {
     .menu-card ul li {
         color: #333; /* Dark color for better readability */
     }
- /* Slideshow Container Styling */
-.DreamTin-slideshow, .TresLech-slideshow, .ClassicTub-slideshow {
+/* Celebration Cakes Slideshow Styles */
+.DreamTin-slideshow, .TresLech-slideshow, .ClassicTub-slideshow{
     position: relative;
-    max-width: 90%; /* Adjust width to be smaller on mobile devices */
-    height: 400px; /* Fixed height for consistent positioning */
-    margin: 10px auto; /* Center the slideshow */
-    overflow: hidden; /* Hide overflow to maintain layout */
+    max-width: 500px;
+    margin: 20px auto;
+    overflow: hidden;
+    height: 400px;
 }
 
-/* Slideshow Image Styling */
+.DreamTin-slideshow .slide, .TresLech-slideshow .slide, .ClassicTub-slideshow .slide {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
 .DreamTin-slideshow img, .TresLech-slideshow img, .ClassicTub-slideshow img {
-    width: 100%; /* Ensure images fit the container width */
-    height: 100%; /* Maintain container height */
-    object-fit: cover; /* Cover the container while maintaining aspect ratio */
-    display: block; /* Remove extra space below images */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.DreamTin-slideshow:hover img, .TresLech-slideshow:hover img, .ClassicTub-slideshow:hover img {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+.DreamTin-slideshow p, .TresLech-slideshow p, .ClassicTub-slideshow p {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    background: rgba(255, 255, 255, 0.7);
+    text-align: center;
+    box-sizing: border-box;
 }
 
 /* Additional Styles for Scrolling */
