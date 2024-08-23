@@ -26,7 +26,7 @@
     border-radius: 8px;
     padding: 20px;
     margin: 10px auto;
-    background-color: rgba(255, 255, 255, 0.8); /* Slightly more opaque background for readability */
+    background-color: rgba(255, 255, 255, 0.10); /* Slightly more opaque background for readability */
     background-image: url('jar-delicacies-background.jpg'); /* Background image for jar delicacies */
     background-size: cover; /* Cover the entire card */
     background-position: center; /* Center the image */
