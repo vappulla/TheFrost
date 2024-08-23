@@ -48,15 +48,16 @@ header {
     border-radius: 8px;
     padding: 20px;
     margin: 10px auto;
-    background-color: rgba(255, 255, 255, 0.9); /* More opaque background for better readability */
-    background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url('logo.jpg'); /* Light overlay on the background image */
-    background-size: cover; /* Cover the entire card */
+    background-color: rgba(255, 255, 255, 0.85); /* Slightly increased opacity */
+    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('logo.jpg'); /* Light overlay on the background image */
+    background-size: cover; /* Keep the image covering the card */
     background-position: center; /* Center the image */
-    background-blend-mode: overlay; /* Blend the background image with the color */
+    background-blend-mode: overlay; /* Blend the background with the overlay */
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
+
 
 
 .menu-card h4 {
@@ -219,12 +220,13 @@ header {
         padding-left: 20px;
     }
 
-   .menu-card {
-        background-color: rgba(0, 0, 0, 0.7); /* Darker background for better readability */
-        background-image: none; /* Remove the background image on mobile */
-        color: #fff; /* White text color for contrast */
+  .menu-card {
+        background-color: rgba(255, 255, 255, 0.85); /* Slightly increased opacity */
+        background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('logo.jpg'); /* Light overlay on the background image */
+        background-size: cover; /* Keep the image covering the card */
+        background-position: center; /* Center the image */
+        background-blend-mode: overlay; /* Blend the background with the overlay */
     }
-
     .menu-card h4 {
         color: #fff; /* Ensure heading text is visible */
     }
