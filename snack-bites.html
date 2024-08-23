@@ -263,7 +263,7 @@
         gap: 10px;
     }
 
-    .brownie-slideshow,
+ .brownie-slideshow,
     .brownieAssorted-slideshow,
     .brownieSlab-slideshow,
     .brownieBento-slideshow,
@@ -282,10 +282,12 @@
     .Cookie-slideshow img,
     .Cupcake-slideshow img,
     .Muffin-slideshow img {
-        width: 100%;
-        height: auto; /* Ensure the height adjusts with the width */
+        max-width: 100%; /* Ensure the images do not exceed their container */
+        height: auto; /* Maintain aspect ratio */
+        object-fit: contain; /* Ensure images fit within their container without distortion */
     }
 }
+
 
 
 
