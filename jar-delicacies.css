@@ -1,38 +1,15 @@
 /* General Styles */
 body {
     font-family: 'Times New Roman', serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-header {
-    background: #f8f8f8;
-    padding: 10px 20px;
-    text-align: center;
-}
-
-.nav a {
-    text-decoration: none;
-    color: black;
-    padding: 10px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.nav a.active {
-    background-color: #f4a4a4;
-    color: white;
-    border: 2px solid #f4a4a4;
 }
 
 .content {
     padding: 20px;
-    margin-top: 40px;
+    margin-top: 40px; /* Add space above the slides */
 }
 
 .section {
-    margin-bottom: 40px;
+    margin-bottom: 40px; /* Increased space below the section */
 }
 
 .subsection {
@@ -43,30 +20,26 @@ header {
 
 .menu-card {
     width: 90%;
-    max-width: 700px;
+    max-width: 700px; /* Increased max-width for better desktop appearance */
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 20px;
     margin: 10px auto;
-    background-color: rgba(255, 255, 255, 0.9); /* More opaque background for better readability */
-    background-image: url('logo.jpg'); /* Background image URL */
-    background-size: cover;
-    background-position: center;
-    background-blend-mode: overlay;
+    background-color: rgba(255, 255, 255, 0.9); /* Opaque background for better readability */
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
 
 .menu-card .flavors {
-    margin-bottom: 20px;
+    margin-bottom: 20px; /* Add space below the "Our Specials" heading */
 }
 
 .menu-card h4 {
     margin-top: 0;
     font-size: 18px;
     font-weight: bold;
-    color: #333;
+    color: #333; /* Ensure text color contrasts well with the background */
 }
 
 .menu-card ul {
@@ -78,7 +51,7 @@ header {
 
 .menu-card ul li {
     padding: 5px 0;
-    color: #333;
+    color: #333; /* Ensure list item text color contrasts well with the background */
 }
 
 .star {
@@ -87,28 +60,28 @@ header {
 }
 
 .separator {
-    width: 1px;
+    width: 1px; /* Make the line narrower */
     background-color: #ccc;
-    height: auto;
-    margin-left: 1in;
-    margin-right: 0;
+    height: auto; /* Set the height to 4 inches */
+    margin-left: 1in; /* Move the lines to the right by 3 inches */
+    margin-right: 0; /* Ensure no margin on the right */
 }
 
 .description {
     flex: 1;
     font-family: 'Gabriola', serif;
-    font-size: 20px;
-    padding-left: 20px;
-    border-left: 1px solid #ccc;
-    padding-top: 100px;
+    font-size: 20px; /* Increase the font size */
+    padding-left: 20px; /* Move the description to the right */
+    border-left: 1px solid #ccc; /* Make the left border narrower */
+    padding-top: 100px; /* Add top padding to move the description down */
 }
 
 .description b {
-    font-size: 30px;
+    font-size: 30px; /* Match the font size for bold text */
 }
 
 .description strong {
-    font-size: 20px;
+    font-size: 20px; /* Match the font size for strong text */
 }
 
 .dropdown {
@@ -135,14 +108,14 @@ header {
 .flavor-columns {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 10px; /* Reduce the gap between columns */
 }
 
 .flavor-columns ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
-    width: 180px;
+    width: 180px; /* Adjust the width to reduce space between columns */
 }
 
 #addDreamTinToCartBtn, #addTresLechToCartBtn, #addClassicTubToCartBtn {
@@ -172,21 +145,21 @@ header {
 .DreamTin-slideshow, .TresLech-slideshow, .ClassicTub-slideshow {
     position: relative;
     max-width: 500px;
-    margin: 20px auto;
+    margin: 20px auto; /* Adds space above the slideshow */
     overflow: hidden;
-    height: 400px;
+    height: 400px; /* Set a fixed height for the container */
 }
 
 .DreamTin-slideshow .slide, .TresLech-slideshow .slide, .ClassicTub-slideshow .slide {
     position: relative;
     width: 100%;
-    height: 100%;
+    height: 100%; /* Ensure slides take up the full height */
 }
 
 .DreamTin-slideshow img, .TresLech-slideshow img, .ClassicTub-slideshow img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: 100%; /* Ensure image takes up the full container */
+    object-fit: cover; /* Crop the images to fit the container */
     display: block;
     transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
 }
@@ -197,37 +170,37 @@ header {
 }
 
 .DreamTin-slideshow p, .TresLech-slideshow p, .ClassicTub-slideshow p {
-    position: absolute;
-    top: 0;
+    position: absolute; /* Position captions absolutely within the slide */
+    top: 0; /* Place captions at the top of the image */
     width: 100%;
     padding: 10px;
     font-size: 16px;
-    font-weight: bold;
+    font-weight: bold; /* Make captions bold */
     color: #333;
     background: rgba(255, 255, 255, 0.7);
-    text-align: center;
+    text-align: center; /* Center align text within the caption block */
     box-sizing: border-box;
 }
 
-/* Navigation Styles */
 .nav a {
     text-decoration: none;
-    color: black;
+    color: black; /* Or any color that fits your design */
     padding: 10px;
     border-radius: 5px;
     transition: background-color 0.3s ease;
 }
 
+/* Style for the active link */
 .nav a.active {
-    background-color: #f4a4a4;
-    color: white;
-    border: 2px solid #f4a4a4;
+    background-color: #f4a4a4; /* Background color for the active link */
+    color: white; /* Text color for the active link */
+    border: 2px solid #f4a4a4; /* Border color and width for the active link */
 }
 
-/* Responsive Styles */
+/* Media Query for Mobile Devices */
 @media (max-width: 768px) {
     .content {
-        padding: 20px;
+        padding-left: 20px;
     }
 
     .section, .subsection {
@@ -239,28 +212,16 @@ header {
     }
 
     .menu-card {
-        background-color: rgba(255, 255, 255, 0.9); /* Lighter background for mobile */
-        background-image: none; /* Remove background image for mobile */
-        color: #333; /* Darker text color for better readability */
+        background-color: rgba(255, 255, 255, 0.9); /* Ensure lighter background for readability */
+        background-image: none; /* Remove background image */
+        color: #333; /* Ensure text color is applied */
     }
 
     .menu-card h4 {
-        color: #333; /* Ensure heading text is visible */
+        color: #333; /* Ensure heading color is applied */
     }
 
     .menu-card ul li {
-        color: #333; /* Darker text color for list items */
-    }
-
-    .DreamTin-slideshow, .TresLech-slideshow, .ClassicTub-slideshow {
-        max-width: 90%;
-        height: auto;
-        margin: 10px auto;
-    }
-
-    .DreamTin-slideshow img, .TresLech-slideshow img, .ClassicTub-slideshow img {
-        max-width: 100%;
-        height: auto;
-        object-fit: contain;
+        color: #333; /* Ensure list item color is applied */
     }
 }
