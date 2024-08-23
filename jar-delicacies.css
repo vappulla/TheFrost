@@ -18,25 +18,27 @@
     padding-left: 20px;
 }
 
- /* Common styles for all menu cards */
-        .menu-card {
-            width: 90%;
-            max-width: 700px; /* Increased max-width for better desktop appearance */
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            padding: 20px;
-            margin: 10px auto;
-            background-color: rgba(255, 255, 255, 0.9); /* More opaque background for better readability */
-            background-image: url('logo.jpg'); /* Background image URL */
-            background-size: cover; /* Cover the entire card */
-            background-position: center; /* Center the image */
-            background-blend-mode: overlay; /* Blend the background image with the color */
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-        }
+.menu-card {
+    width: 90%;
+    max-width: 700px; /* Increased max-width for better desktop appearance */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px auto;
+    background-color: rgba(255, 255, 255, 0.9); /* More opaque background for better readability */
+    background-image: url('logo.jpg'); /* Background image URL */
+    background-size: cover; /* Cover the entire card */
+    background-position: center; /* Center the image */
+    background-blend-mode: overlay; /* Blend the background image with the color */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
 
-    
+.menu-card .flavors {
+    margin-bottom: 20px; /* Add space below the "Our Specials" heading */
+}
+
 .menu-card h4 {
     margin-top: 0;
     font-size: 18px;
