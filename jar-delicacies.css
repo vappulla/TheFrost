@@ -48,8 +48,8 @@ header {
     border-radius: 8px;
     padding: 20px;
     margin: 10px auto;
-    background-color: rgba(255, 255, 255, 0.9);
-    background-image: url('logo.jpg');
+    background-color: rgba(255, 255, 255, 0.9); /* More opaque background for better readability */
+    background-image: url('logo.jpg'); /* Background image URL */
     background-size: cover;
     background-position: center;
     background-blend-mode: overlay;
@@ -209,6 +209,7 @@ header {
     box-sizing: border-box;
 }
 
+/* Navigation Styles */
 .nav a {
     text-decoration: none;
     color: black;
@@ -238,28 +239,28 @@ header {
     }
 
     .menu-card {
-        background-color: rgba(0, 0, 0, 0.7); /* Darker background for better readability */
-        background-image: none; /* Remove background image */
-        color: #fff; /* White text color for contrast */
+        background-color: rgba(255, 255, 255, 0.9); /* Lighter background for mobile */
+        background-image: none; /* Remove background image for mobile */
+        color: #333; /* Darker text color for better readability */
     }
 
     .menu-card h4 {
-        color: #fff; /* Ensure heading text is visible */
+        color: #333; /* Ensure heading text is visible */
     }
 
     .menu-card ul li {
-        color: #ddd; /* Lighter text color for list items */
+        color: #333; /* Darker text color for list items */
     }
 
     .DreamTin-slideshow, .TresLech-slideshow, .ClassicTub-slideshow {
-        max-width: 90%; /* Adjust width to be smaller on mobile devices */
-        height: auto; /* Adjust height proportionally */
-        margin: 10px auto; /* Center the slideshow */
+        max-width: 90%;
+        height: auto;
+        margin: 10px auto;
     }
 
     .DreamTin-slideshow img, .TresLech-slideshow img, .ClassicTub-slideshow img {
-        max-width: 100%; /* Ensure the images do not exceed their container */
-        height: auto; /* Maintain aspect ratio */
-        object-fit: contain; /* Ensure images fit within their container without distortion */
+        max-width: 100%;
+        height: auto;
+        object-fit: contain;
     }
 }
