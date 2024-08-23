@@ -27,7 +27,8 @@ body {
     margin: 10px auto;
     background: url('logo.jpg') no-repeat center center; /* Background image */
     background-size: cover; /* Cover the entire background */
-    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent overlay for readability */
+    background-blur: 5px; /* Optional: Adds a blur effect to the background */
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent overlay for readability */
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -42,6 +43,7 @@ body {
     font-size: 18px;
     font-weight: bold;
     color: #333; /* Ensure text color contrasts well with the background */
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8); /* Add shadow for better readability */
 }
 
 .menu-card ul {
@@ -54,6 +56,7 @@ body {
 .menu-card ul li {
     padding: 5px 0;
     color: #333; /* Ensure list item text color contrasts well with the background */
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8); /* Add shadow for better readability */
 }
 
 .star {
@@ -222,7 +225,8 @@ body {
         margin: 10px auto;
         background: url('logo.jpg') no-repeat center center; /* Background image */
         background-size: cover; /* Ensure the image covers the entire background */
-        background-color: rgba(255, 255, 255, 0.6); /* Semi-transparent overlay for readability */
+        background-blur: 5px; /* Optional: Adds a blur effect to the background */
+        background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent overlay for readability */
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -230,9 +234,11 @@ body {
 
     .menu-card h4 {
         color: #333; /* Ensure heading color is applied */
+        text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8); /* Add shadow for better readability */
     }
 
     .menu-card ul li {
         color: #333; /* Ensure list item color is applied */
+        text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8); /* Add shadow for better readability */
     }
 }
