@@ -233,57 +233,49 @@
             box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
         }
 
-        /* Responsive design adjustments */
-        @media (max-width: 768px) {
-            .content {
-                padding: 10px;
-                margin-top: 20px;
-            }
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+    .menu-card {
+        padding: 10px;
+        background-color: rgba(255, 255, 255, 0.7); /* Lighter opacity for mobile */
+        background-image: url('logo.jpg');
+        background-size: cover;
+        background-position: center;
+        background-blend-mode: overlay;
+    }
 
-           
-            .menu-card {
-                padding: 10px;
-                background-color: rgba(255, 255, 255, 0.9); /* Same opacity for mobile */
-                background-image: url('logo.jpg'); /* Keep the background image */
-                background-size: cover;
-                background-position: center;
-                background-blend-mode: overlay;
-            }
+    .description {
+        font-size: 24px;
+        padding-left: 10px;
+        padding-top: 50px;
+        text-align: left;
+    }
 
-            .description {
-                font-size: 24px;
-                padding-left: 10px;
-                padding-top: 50px;
-                text-align: left; /* Align text to the left on mobile for better readability */
-            }
+    .separator {
+        margin: 20px 0;
+    }
 
-            .separator {
-                margin: 20px 0; /* Ensure separator is properly spaced */
-            }
+    .nav a {
+        padding: 8px;
+    }
 
-            .nav a {
-                padding: 8px;
-            }
+    .dropdown {
+        flex-direction: column;
+        gap: 10px;
+    }
 
-            .dropdown {
-                flex-direction: column;
-                gap: 10px;
-            }
+    .brownie-slideshow,
+    .brownieAssorted-slideshow,
+    .brownieSlab-slideshow,
+    .brownieBento-slideshow,
+    .Cookie-slideshow,
+    .Cupcake-slideshow,
+    .Muffin-slideshow {
+        max-width: 100%;
+        height: auto;
+    }
+}
 
-            @media (max-width: 100px) {
-            .brownie-slideshow,
-            .brownieAssorted-slideshow,
-            .brownieSlab-slideshow,
-            .brownieBento-slideshow,
-            .Cookie-slideshow,
-            .Cupcake-slideshow,
-            .Muffin-slideshow {
-                max-width: 100%; /* Full width for mobile screens */
-                height: auto; /* Adjust height proportionally */
-            }
-            
-
-        }
 
 
 
