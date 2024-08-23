@@ -5,13 +5,20 @@
 }
 
 .muffins-menu-card {
+    width: 90%;
+    max-width: 700px; /* Increased max-width for better desktop appearance */
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 20px;
-    margin-top: 10px;
-    background-color: #f9f9f9;
+    margin: 10px auto;
+    background-color: rgba(255, 255, 255, 0.9); /* More opaque background for better readability */
+    background-image: url('logo.jpg'); /* Background image URL */
+    background-size: cover; /* Cover the entire card */
+    background-position: center; /* Center the image */
+    background-blend-mode: overlay; /* Blend the background image with the color */
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
 }
 
 .muffins-flavors {
@@ -92,7 +99,9 @@
 
 /* Muffins Dropdown Menu Specific Styles */
 .muffins-dropdown {
-    margin-top: 20px;
+    display: flex;
+    gap: 20px; /* Added gap between dropdowns */
+    margin-top: 20px; /* Added margin-top */
 }
 
 .muffins-dropdown .group {
@@ -110,6 +119,24 @@
     border-radius: 4px;
     border: 1px solid #ccc;
 }
+#addMuffinToCartBtn {
+    margin-top: 20px;
+    padding: 5px 10px; /* Smaller padding */
+    font-size: 12px; /* Smaller font size */
+    background: linear-gradient(45deg, #8e44ad, #6a1b9a);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1); /* Smaller shadow */
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+#addMuffinToCartBtn:hover {
+    background: linear-gradient(45deg, #6a1b9a, #8e44ad);
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2); /* Slightly larger shadow on hover */
+}
+
 
 /* Responsive design for Muffins Section */
 @media (max-width: 768px) {
