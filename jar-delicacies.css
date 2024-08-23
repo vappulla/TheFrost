@@ -27,7 +27,7 @@
     padding: 20px;
     margin: 10px auto;
     background-color: rgba(255, 255, 255, 0.8); /* Increased opacity for better readability */
-    background-image: url('jar-delicacies-background.jpg'); /* Background image for jar delicacies */
+    background-image: url('logo.jpg'); /* Background image for jar delicacies */
     background-size: cover; /* Cover the entire card */
     background-position: center; /* Center the image */
     background-blend-mode: normal; /* Remove blending to ensure the background image is visible */
@@ -60,7 +60,7 @@
     .menu-card {
         width: 95%; /* Adjust width for better fit on small screens */
         background-color: rgba(255, 255, 255, 0.9); /* Ensure good readability on mobile */
-        background-image: url('jar-delicacies-background.jpg'); /* Keep background image on mobile */
+        background-image: url('logo.jpg'); /* Keep background image on mobile */
         background-size: cover; /* Ensure background image covers the card */
         background-position: center; /* Center the image */
         background-blend-mode: normal; /* Remove blending to ensure the background image is visible */
