@@ -221,24 +221,55 @@ header {
     }
 
 
-    .menu-card {
-        padding: 10px;
-        background-color: rgba(255, 255, 255, 0.9); /* Same opacity for mobile */
-        background-image: url('logo.jpg'); /* Keep the background image */
-        background-size: cover;
-        background-position: center;
-        background-blend-mode: overlay;
+     .menu-card {
+        background-color: rgba(255, 255, 255, 0.85); /* Slightly increased opacity */
+        background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('logo.jpg'); /* Light overlay on the background image */
+        background-size: cover; /* Keep the image covering the card */
+        background-position: center; /* Center the image */
+        background-blend-mode: overlay; /* Blend the background with the overlay */
     }
+    /* Celebration Cakes Slideshow Styles */
+.Theme-slideshow, .Dessert-slideshow, .Regular-slideshow, .NakedCake-slideshow, .Cheese-slideshow, .Celebration-slideshow {
+    position: relative;
+    max-width: 500px;
+    margin: 20px auto;
+    overflow: hidden;
+    height: 400px;
+}
 
+.Theme-slideshow .slide, .Dessert-slideshow .slide, .Regular-slideshow .slide, .NakedCake-slideshow .slide, .Cheese-slideshow .slide, .Celebration-slideshow .slide {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.Theme-slideshow img, .Dessert-slideshow img, .Regular-slideshow img, .NakedCake-slideshow img, .Cheese-slideshow img, .Celebration-slideshow img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.Theme-slideshow:hover img, .Dessert-slideshow:hover img, .Regular-slideshow:hover img, .NakedCake-slideshow:hover img, .Cheese-slideshow:hover img, .Celebration-slideshow:hover img {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+.Theme-slideshow p, .Dessert-slideshow p, .Regular-slideshow p, .NakedCake-slideshow p, .Cheese-slideshow p, .Celebration-slideshow p {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    background: rgba(255, 255, 255, 0.7);
+    text-align: center;
+    box-sizing: border-box;
+}
     
-    .Theme-slideshow, .Dessert-slideshow, .Regular-slideshow, .NakedCake-slideshow, .Cheese-slideshow, .Celebration-slideshow {
-        max-width: 100%;
-    }
+   
 }
 
-@media (min-width: 769px) {
-    .menu-card {
-        width: 90%;
-        max-width: 700px; /* Adjust width for better appearance on desktops */
-    }
-}
+
