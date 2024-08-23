@@ -263,29 +263,77 @@
         gap: 10px;
     }
 
- .brownie-slideshow,
-    .brownieAssorted-slideshow,
-    .brownieSlab-slideshow,
-    .brownieBento-slideshow,
-    .Cookie-slideshow,
-    .Cupcake-slideshow,
-    .Muffin-slideshow {
-        max-width: 90%; /* Adjust width to be smaller on tablets and mobile devices */
-        height: auto; /* Adjust height proportionally */
-        margin: 10px auto; /* Center the slideshow */
-    }
+  .brownie-slideshow,
+        .brownieAssorted-slideshow,
+        .brownieSlab-slideshow,
+        .brownieBento-slideshow,
+        .Cookie-slideshow,
+        .Cupcake-slideshow,
+        .Muffin-slideshow {
+            position: relative;
+            max-width: 600px; /* Further increased width */
+            margin: 20px auto; /* Center the slideshow */
+            overflow: hidden;
+            height: 450px; /* Further increased height */
+        }
 
-    .brownie-slideshow img,
-    .brownieAssorted-slideshow img,
-    .brownieSlab-slideshow img,
-    .brownieBento-slideshow img,
-    .Cookie-slideshow img,
-    .Cupcake-slideshow img,
-    .Muffin-slideshow img {
-        max-width: 100%; /* Ensure the images do not exceed their container */
-        height: auto; /* Maintain aspect ratio */
-        object-fit: contain; /* Ensure images fit within their container without distortion */
-    }
+        .brownie-slideshow .slide,
+        .brownieAssorted-slideshow .slide,
+        .brownieSlab-slideshow .slide,
+        .brownieBento-slideshow .slide,
+        .Cookie-slideshow .slide,
+        .Cupcake-slideshow .slide,
+        .Muffin-slideshow .slide {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .brownie-slideshow img,
+        .brownieAssorted-slideshow img,
+        .brownieSlab-slideshow img,
+        .brownieBento-slideshow img,
+        .Cookie-slideshow img,
+        .Cupcake-slideshow img,
+        .Muffin-slideshow img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensure images cover the container */
+            display: block;
+            transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+        }
+
+        .brownie-slideshow:hover img,
+        .brownieAssorted-slideshow:hover img,
+        .brownieSlab-slideshow:hover img,
+        .brownieBento-slideshow:hover img,
+        .Cookie-slideshow:hover img,
+        .Cupcake-slideshow:hover img,
+        .Muffin-slideshow:hover img {
+            transform: scale(1.05); /* Slight zoom effect */
+            opacity: 0.9; /* Slightly transparent on hover */
+        }
+
+        .brownie-slideshow p,
+        .brownieAssorted-slideshow p,
+        .brownieSlab-slideshow p,
+        .brownieBento-slideshow p,
+        .Cookie-slideshow p,
+        .Cupcake-slideshow p,
+        .Muffin-slideshow p {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            padding: 15px; /* Increased padding for larger slideshow */
+            font-size: 20px; /* Increased font size */
+            font-weight: bold;
+            color: #333;
+            background: rgba(255, 255, 255, 0.7);
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+
 }
 
 
