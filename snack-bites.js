@@ -42,6 +42,7 @@ function updateFlavors() {
             </optgroup>
         `;
         sizesSelect.innerHTML += `
+            <option value="box2">Box of 2</option>
             <option value="box4">Box of 4</option>
             <option value="box6">Box of 6</option>
             <option value="box9">Box of 9</option>
