@@ -221,7 +221,7 @@ header {
 
     .menu-card {
         background-color: rgba(0, 0, 0, 0.7); /* Darker background for better readability */
-        background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('logo.jpg'); /* Darker overlay on the background image */
+       
         background-size: cover; /* Ensure the image covers the card */
         background-position: center; /* Center the image */
         background-blend-mode: overlay; /* Blend the background with the overlay */
