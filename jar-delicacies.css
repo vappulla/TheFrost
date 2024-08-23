@@ -236,18 +236,25 @@ header {
     .menu-card ul li {
         color: #333; /* Dark color for better readability */
     }
-    
-    /* Celebration Cakes Slideshow Styles */
-   .DreamTin-slideshow, .TresLech-slideshow, .ClassicTub-slideshow{
-        position: relative;
-        max-width: 90%; /* Adjust width to be smaller on mobile devices */
-        height: auto; /* Adjust height proportionally */
-        margin: 10px auto; /* Center the slideshow */
-    }
+ /* Slideshow Container Styling */
+.DreamTin-slideshow, .TresLech-slideshow, .ClassicTub-slideshow {
+    position: relative;
+    max-width: 90%; /* Adjust width to be smaller on mobile devices */
+    height: 400px; /* Fixed height for consistent positioning */
+    margin: 10px auto; /* Center the slideshow */
+    overflow: hidden; /* Hide overflow to maintain layout */
+}
 
-   .DreamTin-slideshow img, .TresLech-slideshow img, .ClassicTub-slideshow img {
-        max-width: 100%; /* Ensure the images do not exceed their container */
-        height: auto; /* Maintain aspect ratio */
-        object-fit: contain; /* Ensure images fit within their container without distortion */
-    }
+/* Slideshow Image Styling */
+.DreamTin-slideshow img, .TresLech-slideshow img, .ClassicTub-slideshow img {
+    width: 100%; /* Ensure images fit the container width */
+    height: 100%; /* Maintain container height */
+    object-fit: cover; /* Cover the container while maintaining aspect ratio */
+    display: block; /* Remove extra space below images */
+}
+
+/* Additional Styles for Scrolling */
+body {
+    overflow-y: scroll; /* Ensure the body scrolls when needed */
+}
 }
