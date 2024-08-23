@@ -155,6 +155,14 @@
         padding-top: 50px;
         text-align: left;
     }
+    .menu-card {
+        padding: 10px;
+        background-color: rgba(255, 255, 255, 0.9); /* Same opacity for mobile */
+        background-image: url('logo.jpg'); /* Keep the background image */
+        background-size: cover;
+        background-position: center;
+        background-blend-mode: overlay;
+    }
 
     .muffins-separator {
         margin: 20px 0;
