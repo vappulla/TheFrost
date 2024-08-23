@@ -242,15 +242,16 @@
         background-position: center; /* Center the image */
         background-blend-mode: overlay; /* Blend the background with the overlay */
     }
-.description {
+
+    .description {
         font-size: 24px;
         padding-left: 10px;
         padding-top: 50px;
-        text-align: left;
+        text-align: left; /* Align text to the left on mobile for better readability */
     }
 
     .separator {
-        margin: 20px 0;
+        margin: 20px 0; /* Ensure separator is properly spaced */
     }
 
     .nav a {
@@ -269,8 +270,20 @@
     .Cookie-slideshow,
     .Cupcake-slideshow,
     .Muffin-slideshow {
-        max-width: 100%;
-        height: auto;
+        max-width: 90%; /* Adjust width to be smaller on tablets and mobile devices */
+        height: auto; /* Adjust height proportionally */
+        margin: 10px auto; /* Center the slideshow */
+    }
+
+    .brownie-slideshow img,
+    .brownieAssorted-slideshow img,
+    .brownieSlab-slideshow img,
+    .brownieBento-slideshow img,
+    .Cookie-slideshow img,
+    .Cupcake-slideshow img,
+    .Muffin-slideshow img {
+        width: 100%;
+        height: auto; /* Ensure the height adjusts with the width */
     }
 }
 
