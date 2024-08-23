@@ -36,16 +36,7 @@
             align-items: flex-start;
         }
 
-        .flavors {
-            display: flex; /* Aligns items side by side */
-            justify-content: space-between;
-            margin-bottom: 20px;
-        }
-
-        .flavors > div {
-            width: 48%; /* Ensure both lists fit side by side with space in between */
-        }
-
+    
         .menu-card h4 {
             margin-top: 0;
             font-size: 18px;
