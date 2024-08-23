@@ -36,26 +36,7 @@
     align-items: flex-start;
 }
 
-/* Optional: Adjust brightness on mobile devices */
-@media (max-width: 768px) {
-  
-    .menu-card {
-        background-color: rgba(0, 0, 0, 0.7); /* Darker background for readability on mobile */
-        background-size: cover; /* Ensure the image covers the card */
-        background-position: center; /* Center the image */
-        background-blend-mode: overlay; /* Blend the background with the overlay */
-        color: #fff; /* White text color for contrast */
-    }
 
-    .menu-card h4 {
-        color: #fff; /* Ensure heading text is visible */
-    }
-
-    .menu-card ul li {
-        color: #ddd; /* Lighter text color for list items */
-    }
-
-}
 
 .menu-card h4 {
     margin-top: 0;
