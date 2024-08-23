@@ -1,4 +1,3 @@
-
 html, body {
   height: 100%;
   margin: 0;
@@ -97,10 +96,25 @@ body {
 
 .email-form input[type="text"],
 .email-form input[type="email"] {
-  padding: 10px;
+  padding: 8px; /* Reduced padding */
+  font-size: 14px; /* Reduced font size */
   border-radius: 5px;
   border: 1px solid #ddd;
-  width: calc(100% - 22px); /* Adjust width to fit within container */
+  max-width: 300px; /* Set a maximum width */
+  width: 100%; /* Ensure it doesn't exceed 100% of the parent container */
+  display: block; /* Ensure inputs are block level to stack vertically */
+  margin-bottom: 10px; /* Add space between input and button container */
+}
+
+.email-buttons {
+  display: flex;
+  gap: 10px; /* Space between buttons */
+}
+
+.email-form button,
+.whatsapp-button {
+  padding: 8px 15px; /* Adjust padding for smaller buttons */
+  font-size: 14px; /* Adjust font size */
 }
 
 .email-form button {
@@ -108,29 +122,33 @@ body {
   color: white;
   border: none;
   border-radius: 5px;
-  padding: 10px;
   cursor: pointer;
-  margin-top: 10px;
+  display: inline-block; /* Ensure it's inline with others */
 }
 
 .email-form button:hover {
   background-color: #45a049;
 }
 
-#errorMessage {
-  color: red;
-  display: none; /* Hide error message by default */
-  margin-top: 10px;
-}
-
-/* Additional styles for the WhatsApp button */
 .whatsapp-button {
   background-color: #25D366;
-  margin-left: 10px; /* Add margin to separate from the email button */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 15px; /* Adjust padding for smaller buttons */
+  cursor: pointer;
+  display: inline-block; /* Ensure it's inline with others */
+  margin-top: 0; /* Remove top margin to align with email button */
 }
 
 .whatsapp-button:hover {
   background-color: #1EBE57;
+}
+
+#errorMessage {
+  color: red;
+  display: none; /* Hide error message by default */
+  margin-top: 10px;
 }
 
 /* Note for WhatsApp */
