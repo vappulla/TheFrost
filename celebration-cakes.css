@@ -220,9 +220,14 @@ header {
         padding-left: 20px;
     }
 
+
     .menu-card {
-        width: 100%;
-        max-width: none;
+        padding: 10px;
+        background-color: rgba(255, 255, 255, 0.9); /* Same opacity for mobile */
+        background-image: url('logo.jpg'); /* Keep the background image */
+        background-size: cover;
+        background-position: center;
+        background-blend-mode: overlay;
     }
 
     
