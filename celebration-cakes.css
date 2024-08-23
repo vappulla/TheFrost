@@ -219,12 +219,9 @@ header {
         padding-left: 20px;
     }
 
-    .menu-card {
+   .menu-card {
         background-color: rgba(0, 0, 0, 0.7); /* Darker background for better readability */
-       
-        background-size: cover; /* Ensure the image covers the card */
-        background-position: center; /* Center the image */
-        background-blend-mode: overlay; /* Blend the background with the overlay */
+        background-image: none; /* Remove the background image on mobile */
         color: #fff; /* White text color for contrast */
     }
 
@@ -235,7 +232,6 @@ header {
     .menu-card ul li {
         color: #ddd; /* Lighter text color for list items */
     }
-
     /* Celebration Cakes Slideshow Styles */
     .Theme-slideshow, .Dessert-slideshow, .Regular-slideshow, .NakedCake-slideshow, .Cheese-slideshow, .Celebration-slideshow {
         position: relative;
