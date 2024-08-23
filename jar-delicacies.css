@@ -142,7 +142,7 @@ header {
     width: 180px;
 }
 
-#addRegularToCartBtn, #addNakedCakeToCartBtn, #addCheeseCakeToCartBtn {
+#addDreamTinToCartBtn, #addTresLechToCartBtn, #addClassicTubToCartBtn{
     margin-top: 20px;
     padding: 10px 20px;
     font-size: 16px;
@@ -155,7 +155,7 @@ header {
     transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
-#addRegularToCartBtn:hover, #addNakedCakeToCartBtn:hover, #addCheeseCakeToCartBtn:hover {
+#addDreamTinToCartBtn:hover, #addTresLechToCartBtn:hover, #addClassicTubToCartBtn:hover {
     background: linear-gradient(45deg, #6a1b9a, #8e44ad);
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
 }
@@ -167,7 +167,7 @@ header {
 }
 
 /* Celebration Cakes Slideshow Styles */
-.Theme-slideshow, .Dessert-slideshow, .Regular-slideshow, .NakedCake-slideshow, .Cheese-slideshow, .Celebration-slideshow {
+.DreamTin-slideshow, .TresLech-slideshow, .ClassicTub-slideshow{
     position: relative;
     max-width: 500px;
     margin: 20px auto;
@@ -175,13 +175,13 @@ header {
     height: 400px;
 }
 
-.Theme-slideshow .slide, .Dessert-slideshow .slide, .Regular-slideshow .slide, .NakedCake-slideshow .slide, .Cheese-slideshow .slide, .Celebration-slideshow .slide {
+.DreamTin-slideshow .slide, .TresLech-slideshow .slide, .ClassicTub-slideshow .slide {
     position: relative;
     width: 100%;
     height: 100%;
 }
 
-.Theme-slideshow img, .Dessert-slideshow img, .Regular-slideshow img, .NakedCake-slideshow img, .Cheese-slideshow img, .Celebration-slideshow img {
+.DreamTin-slideshow img, .TresLech-slideshow img, .ClassicTub-slideshow img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -189,12 +189,12 @@ header {
     transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
 }
 
-.Theme-slideshow:hover img, .Dessert-slideshow:hover img, .Regular-slideshow:hover img, .NakedCake-slideshow:hover img, .Cheese-slideshow:hover img, .Celebration-slideshow:hover img {
+.DreamTin-slideshow:hover img, .TresLech-slideshow:hover img, .ClassicTub-slideshow:hover img {
     transform: scale(1.05);
     opacity: 0.9;
 }
 
-.Theme-slideshow p, .Dessert-slideshow p, .Regular-slideshow p, .NakedCake-slideshow p, .Cheese-slideshow p, .Celebration-slideshow p {
+.DreamTin-slideshow p, .TresLech-slideshow p, .ClassicTub-slideshow p {
     position: absolute;
     top: 0;
     width: 100%;
@@ -238,14 +238,14 @@ header {
     }
     
     /* Celebration Cakes Slideshow Styles */
-    .Theme-slideshow, .Dessert-slideshow, .Regular-slideshow, .NakedCake-slideshow, .Cheese-slideshow, .Celebration-slideshow {
+   .DreamTin-slideshow, .TresLech-slideshow, .ClassicTub-slideshow{
         position: relative;
         max-width: 90%; /* Adjust width to be smaller on mobile devices */
         height: auto; /* Adjust height proportionally */
         margin: 10px auto; /* Center the slideshow */
     }
 
-    .Theme-slideshow img, .Dessert-slideshow img, .Regular-slideshow img, .NakedCake-slideshow img, .Cheese-slideshow img, .Celebration-slideshow img {
+   .DreamTin-slideshow img, .TresLech-slideshow img, .ClassicTub-slideshow img {
         max-width: 100%; /* Ensure the images do not exceed their container */
         height: auto; /* Maintain aspect ratio */
         object-fit: contain; /* Ensure images fit within their container without distortion */
