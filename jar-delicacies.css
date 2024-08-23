@@ -21,29 +21,41 @@
 /* Menu card styling */
 .menu-card {
     width: 90%;
-    max-width: 700px; /* Increased max-width for better desktop appearance */
+    max-width: 700px; /* Max width for desktop */
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 20px;
     margin: 10px auto;
-    background-color: rgba(255, 255, 255, 0.9); /* More opaque background for better readability */
-    background-image: url('logo.jpg'); /* Background image URL */
+    background-color: rgba(255, 255, 255, 0.9); /* More opaque background for readability */
+    background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url('jar-delicacies-background.jpg'); /* Background image for jar delicacies */
     background-size: cover; /* Cover the entire card */
     background-position: center; /* Center the image */
-    background-blend-mode: overlay; /* Blend the background image with the color */
+    background-blend-mode: overlay; /* Blend the image with the background color */
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    filter: brightness(70%); /* Adjust the brightness for better readability */
 }
 
 /* Optional: Adjust brightness on mobile devices */
 @media (max-width: 768px) {
+  
     .menu-card {
-        filter: brightness(60%); /* More brightness adjustment for smaller screens */
+        background-color: rgba(0, 0, 0, 0.7); /* Darker background for readability on mobile */
+        background-size: cover; /* Ensure the image covers the card */
+        background-position: center; /* Center the image */
+        background-blend-mode: overlay; /* Blend the background with the overlay */
+        color: #fff; /* White text color for contrast */
     }
-}
 
+    .menu-card h4 {
+        color: #fff; /* Ensure heading text is visible */
+    }
+
+    .menu-card ul li {
+        color: #ddd; /* Lighter text color for list items */
+    }
+
+}
 
 .menu-card h4 {
     margin-top: 0;
@@ -54,6 +66,8 @@
 .menu-card ul {
     list-style-type: none;
     padding-left: 0;
+    margin: 0;
+    width: 100%;
 }
 
 .menu-card ul li {
