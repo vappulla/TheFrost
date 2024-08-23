@@ -1,12 +1,12 @@
+/* General Styles */
+body {
+    font-family: 'Times New Roman', serif;
+}
 
-/* Inline CSS to move subsections to the left and style the menu card */
 .content {
     padding: 20px;
     margin-top: 40px; /* Add space above the slides */
 }
- body {
-        font-family: 'Times New Roman', serif;
-    }
 
 .section {
     margin-bottom: 40px; /* Increased space below the section */
@@ -25,11 +25,11 @@
     border-radius: 8px;
     padding: 20px;
     margin: 10px auto;
-    background-color: rgba(255, 255, 255, 0.9); /* More opaque background for better readability */
-    background-image: url('logo.jpg'); /* Background image URL */
-    background-size: cover; /* Cover the entire card */
+    background-color: rgba(255, 255, 255, 0.85); /* Slightly increased opacity */
+    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('logo.jpg'); /* Light overlay on the background image */
+    background-size: cover; /* Keep the image covering the card */
     background-position: center; /* Center the image */
-    background-blend-mode: overlay; /* Blend the background image with the color */
+    background-blend-mode: overlay; /* Blend the background with the overlay */
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -73,7 +73,7 @@
 
 .description {
     flex: 1;
-     font-family: 'Gabriola', serif;
+    font-family: 'Gabriola', serif;
     font-size: 20px; /* Increase the font size */
     padding-left: 20px; /* Move the description to the right */
     border-left: 1px solid #ccc; /* Make the left border narrower */
@@ -108,6 +108,7 @@
     padding: 8px;
     font-size: 16px;
 }
+
 .flavor-columns {
     display: flex;
     flex-wrap: wrap;
@@ -120,7 +121,8 @@
     margin: 0;
     width: 180px; /* Adjust the width to reduce space between columns */
 }
-#addDreamTinToCartBtn, #addTresLechToCartBtn, #addClassicTubToCartBtn{
+
+#addDreamTinToCartBtn, #addTresLechToCartBtn, #addClassicTubToCartBtn {
     margin-top: 20px;
     padding: 10px 20px;
     font-size: 16px;
@@ -133,7 +135,7 @@
     transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
- #addDreamTinToCartBtn:hover, #addTresLechToCartBtn:hover, #addClassicTubToCartBtn:hover {
+#addDreamTinToCartBtn:hover, #addTresLechToCartBtn:hover, #addClassicTubToCartBtn:hover {
     background: linear-gradient(45deg, #6a1b9a, #8e44ad);
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
 }
@@ -144,28 +146,7 @@
     vertical-align: middle;
 }
 
-.dropdown {
-    display: flex;
-    gap: 20px;
-    margin-top: 20px;
-}
-
-.group {
-    flex: 1;
-}
-
-.group label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-.group select {
-    width: 100%;
-    padding: 8px;
-    font-size: 16px;
-}
-
-.DreamTin-slideshow, .TresLech-slideshow, .ClassicTub-slideshow{
+.DreamTin-slideshow, .TresLech-slideshow, .ClassicTub-slideshow {
     position: relative;
     max-width: 500px;
     margin: 20px auto; /* Adds space above the slideshow */
@@ -184,13 +165,13 @@
     height: 100%; /* Ensure image takes up the full container */
     object-fit: cover; /* Crop the images to fit the container */
     display: block;
-     transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
 }
+
 .DreamTin-slideshow:hover img, .TresLech-slideshow:hover img, .ClassicTub-slideshow:hover img {
     transform: scale(1.05);
     opacity: 0.9;
 }
-
 
 .DreamTin-slideshow p, .TresLech-slideshow p, .ClassicTub-slideshow p {
     position: absolute; /* Position captions absolutely within the slide */
@@ -204,6 +185,7 @@
     text-align: center; /* Center align text within the caption block */
     box-sizing: border-box;
 }
+
 .nav a {
     text-decoration: none;
     color: black; /* Or any color that fits your design */
@@ -218,6 +200,8 @@
     color: white; /* Text color for the active link */
     border: 2px solid #f4a4a4; /* Border color and width for the active link */
 }
+
+/* Responsive Styles */
 @media (max-width: 768px) {
     .content {
         padding-left: 20px;
@@ -232,11 +216,11 @@
     }
 
     .menu-card {
-        background-color: rgba(0, 0, 0, 0.7); /* Darker background for better readability */
-       
+        background-color: rgba(255, 255, 255, 0.85); /* Same opacity as desktop for consistency */
+        background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('logo.jpg'); /* Keep the same background styling */
         background-size: cover; /* Ensure the image covers the card */
         background-position: center; /* Center the image */
-        background-blend-mode: overlay; /* Blend the background with the overlay */
+        background-blend-mode: overlay; /* Maintain the overlay effect */
         color: #fff; /* White text color for contrast */
     }
 
