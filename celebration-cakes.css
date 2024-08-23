@@ -58,12 +58,11 @@ header {
     align-items: flex-start;
 }
 
-
-
 .menu-card h4 {
     margin-top: 0;
     font-size: 18px;
     font-weight: bold;
+    color: #333; /* Dark color for better readability */
 }
 
 .menu-card ul {
@@ -75,6 +74,7 @@ header {
 
 .menu-card ul li {
     padding: 5px 0;
+    color: #333; /* Dark color for better readability */
 }
 
 .star {
@@ -220,20 +220,22 @@ header {
         padding-left: 20px;
     }
 
-  .menu-card {
-        background-color: rgba(255, 255, 255, 0.85); /* Slightly increased opacity */
+    .menu-card {
+        background-color: rgba(255, 255, 255, 0.85); /* Maintain lightness */
         background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('logo.jpg'); /* Light overlay on the background image */
         background-size: cover; /* Keep the image covering the card */
         background-position: center; /* Center the image */
         background-blend-mode: overlay; /* Blend the background with the overlay */
     }
+
     .menu-card h4 {
-        color: #fff; /* Ensure heading text is visible */
+        color: #333; /* Ensure heading text is visible */
     }
 
     .menu-card ul li {
-        color: #ddd; /* Lighter text color for list items */
+        color: #333; /* Dark color for better readability */
     }
+    
     /* Celebration Cakes Slideshow Styles */
     .Theme-slideshow, .Dessert-slideshow, .Regular-slideshow, .NakedCake-slideshow, .Cheese-slideshow, .Celebration-slideshow {
         position: relative;
