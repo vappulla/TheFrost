@@ -128,12 +128,14 @@ body {
 }
 
 /* Add this to your existing CSS */
+/* Menu and cart container styles */
 .menu-cart-container {
     display: flex;
     align-items: center;
-    gap: 20px; /* Adjust the space between the menu and the cart */
+    gap: 40px; /* Increased the space between the menu and the cart */
     margin-left: auto; /* Push the menu and cart to the right */
 }
+
 
 .cart {
     width: 30px;
