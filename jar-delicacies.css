@@ -223,7 +223,7 @@ header {
 
     .menu-card {
         background-color: rgba(255, 255, 255, 0.85); /* Maintain lightness */
-        background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('logo.jpg'); /* Light overlay on the background image */
+        background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('logo1.jpg'); /* Light overlay on the background image */
         background-size: cover; /* Keep the image covering the card */
         background-position: center; /* Center the image */
         background-blend-mode: overlay; /* Blend the background with the overlay */
