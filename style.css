@@ -127,11 +127,19 @@ body {
     border: 2px solid #f4a4a4; /* Border color and width for the active link */
 }
 
+/* Add this to your existing CSS */
+.menu-cart-container {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Adjust the space between the menu and the cart */
+    margin-left: auto; /* Push the menu and cart to the right */
+}
+
 .cart {
     width: 30px;
     height: auto;
+    cursor: pointer; /* Add a pointer cursor for better UX */
 }
-
 /* Content styles */
 .content {
     padding: 20px;
