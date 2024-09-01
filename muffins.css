@@ -136,6 +136,21 @@
     background: linear-gradient(45deg, #6a1b9a, #8e44ad);
     box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2); /* Slightly larger shadow on hover */
 }
+.muffins-section {
+    text-align: center; /* Center-align text */
+    padding: 20px; /* Add padding for spacing */
+}
+
+.muffins-section h2 {
+    margin-top: 0; /* Remove top margin to reduce space above the heading */
+    margin-bottom: 10px; /* Add space below the heading */
+}
+
+.muffins-section p {
+    margin-top: 0; /* Remove top margin to reduce space above the paragraph */
+    margin-bottom: 20px; /* Add space below the paragraph */
+}
+
 
 
 /* Responsive design for Muffins Section */
