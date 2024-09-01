@@ -140,15 +140,18 @@
 
 /* Responsive design for Muffins Section */
 @media (max-width: 768px) {
-.muffins-section {
+    .muffins-section {
         padding: 10px;
         margin-top: 20px;
     }
 
     .muffins-menu-card {
         padding: 10px;
-        background-color: rgba(255, 255, 255, 0.95); /* Increase opacity for better readability */
-        background-image: none; /* Remove background image on mobile for clarity */
+        background-color: rgba(255, 255, 255, 0.85); /* Increase opacity for better readability */
+        background-image: url('logo1.jpg'); /* Keep the background image */
+        background-size: cover; /* Ensure the image covers the entire card */
+        background-position: center; /* Center the image */
+        background-blend-mode: overlay; /* Blend the image with the background color */
     }
 
     .muffins-description {
