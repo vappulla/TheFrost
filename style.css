@@ -7,6 +7,14 @@ body {
         radial-gradient(circle at top, rgba(255, 255, 255, 0.3), transparent 50%), 
         linear-gradient(to bottom, #f3bec6, #f291a2); /* Gradient with shiny effect */
 }
+/* Container for dropdown and cart */
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
 /* Dropdown Button */
 .dropbtn {
     background-color: #8e44ad;
@@ -57,6 +65,18 @@ body {
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {
     background-color: #6a1b9a;
+}
+
+/* Cart Link */
+.cart-link {
+    display: inline-block;
+    margin-left: auto;
+    padding-left: 20px;
+}
+
+.cart {
+    width: 40px;
+    height: 40px;
 }
 
 
